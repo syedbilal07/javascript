@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Functions</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Functions</h1>
+		<p>A JavaScript function is a block of code designed to perform a particular task.</p>
+		<p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+		<pre>
+		function myFunction(p1, p2) {
+    return p1 * p2;              // The function returns the product of p1 and p2
+}
+		</pre>
+		<h1>JavaScript Function Syntax</h1>
+		<p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
+		<p>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</p>
+		<p>The parentheses may include parameter names separated by commas:
+		   <b>(parameter1, parameter2, ...)</b>
+		</p>
+		<p>The code to be executed, by the function, is placed inside curly brackets: <b>{}</b></p>
+		<pre>
+		function name(parameter1, parameter2, parameter3) {
+    code to be executed
+} 
+		</pre>
+		<p>Function parameters are the names listed in the function definition.</p>
+		<p>Function arguments are the real values received by the function when it is invoked.</p>
+		<p>Inside the function, the arguments behave as local variables.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - A Function is much the same as a Procedure or a Subroutine, in other programming languages.</h2>
+		<h1>Function Invocation</h1>
+		<p>The code inside the function will execute when "something" invokes (calls) the function:</p>
+		<ul>
+			<li>When an event occurs (when a user clicks a button)</li>
+			<li>When it is invoked (called) from JavaScript code</li>
+			<li>Automatically (self invoked)</li>
+		</ul>
+		<p>You will learn a lot more about function invocation later in this tutorial.</p>
+		<h1>Function Return</h1>
+		<p>When JavaScript reaches a return statement, the function will stop executing.</p>
+		<p>If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.</p>
+		<p>Functions often compute a return value. The return value is "returned" back to the "caller":</p>
+		<p>Calculate the product of two numbers, and return the result:</p>
+		<pre>
+		var x = myFunction(4, 3);        // Function is called, return value will end up in x
+
+function myFunction(a, b) {
+    return a * b;                // Function returns the product of a and b
+}
+		</pre>
+		<p>Result</p>
+		<pre>
+		12
+		</pre>
+		<h1>Why Functions?</h1>
+		<p>You can reuse code: Define the code once, and use it many times.</p>
+		<p>You can use the same code many times with different arguments, to produce different results.</p>
+		<p>Convert Fahrenheit to Celsius:</p>
+		<pre>
+		function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+		</pre>
+		<h1>The () Operator Invokes the Function</h1>
+		<p>Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.</p>
+		<p>Accessing a function without () will return the function definition:</p>
+		<pre>
+		function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius;
+		</pre>
+		<h1>Functions Used as Variables</h1>
+		<p>Functions can be used as variable values in formulas, assignments, and calculations.</p>
+		<p>You can use:</p>
+		<pre>
+		var text = "The temperature is " + toCelsius(77) + " Celsius"; 
+		</pre>
+		<p>Instead of:</p>
+		<pre>
+		var x = toCelsius(32);
+		var text = "The temperature is " + x + " Celsius"; 
+		</pre>
+		<h1>Functions : - </h1>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

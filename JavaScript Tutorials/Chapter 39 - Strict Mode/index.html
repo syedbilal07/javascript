@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Strict Mode</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Use Strict</h1>
+		<p>"use strict";  Defines that JavaScript code should be executed in "strict mode".</p>
+		<h1>The "use strict" Directive</h1>
+		<p>The "use strict" directive is new in JavaScript 1.8.5 (ECMAScript version 5).</p>
+		<p>It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.</p>
+		<p>The purpose of "use strict" is to indicate that the code should be executed in "strict mode".</p>
+		<p>With strict mode, you can not, for example, use undeclared variables.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="atuo" width="auto" />NOTE : - Strict mode is supported in:<br />
+		    Internet Explorer from version 10. Firefox from version 4.<br />
+		    Chrome from version 13. Safari from version 5.1. Opera from version 12.
+		</h2>
+		<h1>Declaring Strict Mode</h1>
+		<p>Strict mode is declared by adding "use strict"; to the beginning of a script or a function.</p>
+		<p>Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):</p>
+		<button onclick="strictMode()" class="btn btn-info btn-lg">Strict Mode</button>
+		<p id="strictMode"></p>
+		<button onclick="strictMode1()" class="btn btn-info btn-lg">Strict Mode</button>
+		<p id="strictMode1"></p>
+		<p>Declared inside a function, it has local scope (only the code inside the function is in strict mode):</p>
+		<button onclick="strictModeInsideFunction()" class="btn btn-info btn-lg">Strict Mode Inside Function</button>
+		<p id="strictModeInsideFunction"></p>
+		<h1>The "use strict"; Syntax</h1>
+		<p>The syntax, for declaring strict mode, was designed to be compatible with older versions of JavaScript.</p>
+		<p>Compiling a numeric literal (4 + 5;) or a string literal ("John Doe";) in a JavaScript program has no side effects.
+		   It simply compiles to a non existing variable and dies.</p>
+		<p>So "use strict"; only matters to new compilers that "understand" the meaning of it.</p>
+		<h1>Why Strict Mode?</h1>
+		<p>Strict mode makes it easier to write "secure" JavaScript.</p>
+		<p>Strict mode changes previously accepted "bad syntax" into real errors.</p>
+		<p>As an example, in normal JavaScript, mistyping a variable name creates a new global variable.
+		   In strict mode, this will throw an error, making it impossible to accidentally create a global variable.
+		</p>
+		<p>In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties. </p>
+		<p>In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property,
+		   a non-existing variable, or a non-existing object, will throw an error.
+		</p>
+		<h1>Not Allowed in Strict Mode</h1>
+		<p>Using a variable, without declaring it, is not allowed:</p>
+		<button onclick="variableIsNotAllowedInStrictMode()" class="btn btn-info btn-lg">Variable Is Not Allowed In Strict Mode</button>
+		<p id="variableIsNotAllowedInStrictMode"></p>
+		<p>Using an object, without declaring it, is not allowed because objects are variables too:</p>
+		<button onclick="objectsAreNotAllowedInStrictMode()" class="btn btn-info btn-lg">Objects Are Not Allowed In Strict Mode</button>
+		<p id="objectsAreNotAllowedInStrictMode"></p>
+		<p>Deleting a variable (or object) is not allowed.</p>
+		<button onclick="objectsAndVariablesAreNotAllowedInStrictMode()" class="btn btn-info btn-lg">Objects & Variables Are Not Allowed In Strict Mode</button>
+		<p id="objectsAndVariablesAreNotAllowedInStrictMode"></p>
+		<p>Deleting a function is not allowed.</p>
+		<button onclick="deletingAFunctionIsNotAllowedInStrictMode()" class="btn btn-info btn-lg">Deleting A Function Is Not Allowed In Strict Mode</button>
+		<p id="deletingAFunctionIsNotAllowedInStrictMode"></p>
+		<p>Duplicating a parameter name is not allowed:</p>
+		<button onclick="duplicatingAParameterNameIsNotAllowedInStrictMode()" class="btn btn-info btn-lg">Duplicating A Parameter Name Not Allowed In Strict Mode</button>
+		<p id="duplicatingAParameterNameIsNotAllowedInStrictMode"></p>
+		<p>Octal numeric literals are not allowed:</p>
+		<button onclick="octalNumericLiteralsAreNotAllowedInStrictMode()" class="btn btn-info btn-lg">Octal Numeric Literals Are Not Allowed In Strict Mode</button>
+		<p id="octalNumericLiteralsAreNotAllowedInStrictMode"></p>
+		<p>Escape characters are not allowed:</p>
+		<button onclick="escapeCharactersAreNotAllowedInStrictMode()" class="btn btn-info btn-lg">Escape Characters Are Not Allowed In Strict Mode</button>
+		<p id="escapeCharactersAreNotAllowedInStrictMode"></p>
+		<p>Writing to a read-only property is not allowed:</p>
+		<button onclick="writingReadOnlyPropertyIsNotAllowedInStrictMode()" class="btn btn-info btn-lg">Writing To A Read-Only Property Is Not Allowed In Strict Mode</button>
+		<p id="writingReadOnlyPropertyIsNotAllowedInStrictMode"></p>
+		<p>Writing to a get-only property is not allowed:</p>
+		<button onclick="writingGetOnlyPropertyIsNotAllowedInStrictMode()" class="btn btn-info btn-lg">Writing To Get-Only Property Is Not Allowed In Strict Mode</button>
+		<p id="writingGetOnlyPropertyIsNotAllowedInStrictMode"></p>
+		<p>Deleting an undeletable property is not allowed:</p>
+		<button onclick="deletingAnUndeletablePropertyIsNotAllowedInStrictMode()" class="btn btn-info btn-lg">Deleting An Undeletable Property Is Not Allowed In Strict Mode</button>
+		<p id="deletingAnUndeletablePropertyIsNotAllowedInStrictMode"></p>
+		<p>The string "eval" cannot be used as a variable:</p>
+		<button onclick="stringEvalCannotBeUsedAsAVariable()" class="btn btn-info btn-lg">String Eval Cannot Be Used As A Variable</button>
+		<p id="stringEvalCannotBeUsedAsAVariable"></p>
+		<p>The string "arguments" cannot be used as a variable:</p>
+		<button onclick="stringArgumentsCannotBeUsedAsAVariable()" class="btn btn-info btn-lg">String Arguments Cannot Be Used As A Variable</button>
+		<p id="stringArgumentsCannotBeUsedAsAVariable"></p>
+		<p>The with statement is not allowed:</p>
+		<button onclick="withStatementIsNotAllowed()" class="btn btn-info btn-lg">With Statement Is Not Allowed</button>
+		<p id="withStatementIsNotAllowed"></p>
+		<p>For security reasons, eval() is not allowed to create variables in the scope from which it was called:</p>
+		<button onclick="evalIsNotAllowedToCreateVariables()" class="btn btn-info btn-lg">Eval Is Not Allowed To Create Variables</button>
+		<p id="evalIsNotAllowedToCreateVariables"></p>
+		<p>In function calls like f(), the this value was the global object. In strict mode, it is now undefined.</p>
+		<h1>Future Proof!</h1>
+		<p> Future reserved keywords are not allowed in strict mode. These are:</p>
+		<ul>
+			<li>implements</li>
+			<li>interface</li>
+			<li>let</li>
+			<li>package</li>
+			<li>private</li>
+			<li>protected</li>
+			<li>public</li>
+			<li>static</li>
+			<li>yield</li>
+		</ul>
+		<button onclick="usePublicCausesErros()" class="btn btn-info btn-lg">Using PUBLIC Causes Erros</button>
+		<p id="usePublicCausesErros"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="atuo" width="auto" />NOTE : - The "use strict" directive is only recognized at the
+			beginning of a script or a function.
+		</h2>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Object Prototypes</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>Every JavaScript object has a prototype. The prototype is also an object.</p>
+		<p>All JavaScript objects inherit their properties and methods from their prototype.</p>
+		<p>All JavaScript objects inherit the properties and methods from their prototype.</p>
+		<p>Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype.</p>
+		<p>Objects created with new Date() inherit the Date.prototype.</p>
+		<p>The Object.prototype is on the top of the prototype chain.</p>
+		<p>All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.</p>
+		<h1>Creating a Prototype</h1>
+		<p>The standard way to create an object prototype is to use an object constructor function:</p>
+		<pre>
+		function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+		</pre>
+		<p>With a constructor function, you can use the new keyword to create new objects from the same prototype:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="usingNew()">Using NEW Keyword</button>
+		<p id="usingNew"></p>
+		<p style="background-color:lightyellow">The constructor function is the prototype for Person objects.
+	       It is considered good practice to name constructor function with an upper-case first letter.</p>
+		<h1>Adding Properties and Methods to Objects</h1>
+		<p>Sometimes you want to add new properties (or methods) to an existing object.</p>
+		<p>Sometimes you want to add new properties (or methods) to all existing objects of a given type.</p>
+		<p>Sometimes you want to add new properties (or methods) to an object prototype.</p>
+		<h1>Adding a Property to an Object</h1>
+		<p>Adding a new property to an existing object is easy:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="addingPropertyToExistingObject()">Adding Property To Existing Object</button>
+		<p id="addingPropertyToExistingObject"></p>
+		<p>The property will be added to myFather. Not to myMother. Not to any other person objects.</p>
+		<h1>Adding a Method to an Object</h1>
+		<p>Adding a new method to an existing object is also easy: </p>
+		<button type="button" class="btn btn-success btn-lg" onclick="addingNewMethodToExistingObject()">Adding New Method To Existing Object</button>
+		<p id="addingNewMethodToExistingObject"></p>
+		<p>The method will be added to myFather. Not to myMother.</p>
+		<h1>Adding Properties to a Prototype</h1>
+		<p>You cannot add a new property to a prototype the same way as you add a new property to an existing object, because the prototype is not an existing object.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="addingPropertyToPrototype()">Adding Property To Prototype</button>
+		<p id="addingPropertyToPrototype"></p>
+		<p>To add a new property to a constructor, you must add it to the constructor function:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="addingPropertyToPrototypeUsingConstructor()">Adding Property To Prototype Using Constructor</button>
+		<p id="addingPropertyToPrototypeUsingConstructor"></p>
+		<p style="background-color:lightyellow">Prototype properties can have prototype values (default values).</p>
+		<h1>Adding Methods to a Prototype</h1>
+		<p>Your constructor function can also define methods:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="addingMethodsToPrototype()">Adding Methods To Prototype</button>
+		<p id="addingMethodsToPrototype"></p>
+		<h1>Using the prototype Property</h1>
+		<p>The JavaScript prototype property allows you to add new properties to an existing prototype:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="prototypeProperty()">Prototype Property</button>
+		<p id="prototypeProperty"></p>
+		<p>The JavaScript prototype property also allows you to add new methods to an existing prototype:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="prototypeProperty1()">Prototype Property</button>
+		<p id="prototypeProperty1"></p>
+		<p style="background-color:#f44336">Only modify your own prototypes. Never modify the prototypes of standard JavaScript objects.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

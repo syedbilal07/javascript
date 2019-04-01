@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Object Methods</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>JavaScript methods are the actions that can be performed on objects.</p>
+		<p>A JavaScript method is a property containing a function definition.</p>
+		<dl>
+			<dt>firstName</dt>
+			<dd>Syed</dd>
+			<dt>lastName</dt>
+			<dd>Bilal</dd>
+			<dt>age</dt>
+			<dd>23</dd>
+			<dt>eyeColor</dt>
+			<dd>Black</dd>
+		</dl>
+		<p style="background-color:lightyellow">Methods are functions stored as object properties.</p>
+		<h1>Accessing Object Methods</h1>
+		<p>You create an object method with the following syntax:</p>
+		<pre>
+		methodName : function() { code lines } 
+		</pre>
+		<p>You access an object method with the following syntax:</p>
+		<pre>
+		objectName.methodName()
+		</pre>
+		<p>You will typically describe fullName() as a method of the person object, and fullName as a property. </p>
+		<p>The fullName property will execute (as a function) when it is invoked with ().</p>
+		<p>This example accesses the fullName() method of a person object:</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="accessingObjectMethod1()">Accessing Object Method</button>
+		<p id="accessingObjectMethod1"></p>
+		<p>If you access the fullName property, without (), it will return the function definition:</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="accessingObjectMethod2()">Accessing Object Method</button>
+		<p id="accessingObjectMethod2"></p>
+		<h1>Using Built-In Methods</h1>
+		<p>This example uses the toUpperCase() method of the String object, to convert a text to uppercase:</p>
+		<pre>
+		var message = "Hello world!";
+		var x = message.toUpperCase();
+		</pre>
+		<p>The value of x, after execution of the code above will be:</p>
+		<pre>
+		HELLO WORLD!
+		</pre>
+		<h1>Adding New Methods</h1>
+		<p>Defining methods to an object is done inside the constructor function:</p>
+		<pre>
+		function person(firstName, lastName, age, eyeColor) {
+    this.firstName = firstName; 
+    this.lastName = lastName;
+    this.age = age;
+    this.eyeColor = eyeColor;
+    this.changeName = function (name) {
+        this.lastName = name;
+    };
+}
+		</pre>
+		<p>The changeName() function assigns the value of name to the person's lastName property.</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="addingNewMethods()">Adding New Methods</button>
+		<p id="addingNewMethods"></p>
+		<p>JavaScript knows which person you are talking about by "substituting" this with myMother.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM Nodelist</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>A node list is a collection of nodes</p>
+		<h1>HTML DOM Node List</h1>
+		<p>The getElementsByTagName() method returns a <b>node list.</b> A node list is an array-like collection of nodes.</p>
+		<p>The following code selects all p nodes in a document:</p>
+		<pre>
+		var x = document.getElementsByTagName("p"); 
+		</pre>
+		<button type="button" class="btn btn-success btn-lg" onclick="selectAllNodes()">Select All Nodes</button>
+		<p id="selectAllNodes"></p>
+		<h2>Note: The index starts at 0.</h2>
+		<h1>HTML DOM Node List Length</h1>
+		<p>The length property defines the number of nodes in a node list:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="lengthProperty()">Length Property</button>
+		<p id="lengthProperty"></p>
+		<p>Example explained:</p>
+		<ul>
+			<li>Get all p elements in a node list</li>
+			<li>Display the length of the node list</li>
+		</ul>
+		<p>The length property is useful when you want to loop through the nodes in a node list:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="lengthPropertyInLoops()">Length Property In Loops</button>
+		<div style="background-color:lightyellow">
+		<h3>A node list is not an array!</h3>
+		<p>A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array.
+		However, you cannot use Array Methods, like valueOf() or join() on the node list.</p>
+		</div>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

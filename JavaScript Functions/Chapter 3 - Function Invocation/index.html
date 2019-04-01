@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Function Invocation</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Function Invocation</h1>
+		<p>JavaScript functions can be invoked in 4 different ways.</p>
+		<p>Each method differs in how <b>this</b> is initialized.</p>
+		<h1>The this Keyword</h1>
+		<p>In JavaScript, the thing called <b>this</b> , is the object that "owns" the current code.</p>
+		<p>The value of <b>this</b>, when used in a function, is the object that "owns" the function. </p>
+		<p style="background-color:lightyellow">Note that <b>this</b> is not a variable. It is a keyword. You cannot change the value of <b>this</b></p>
+		<h1>Invoking a JavaScript Function</h1>
+		<p>You have already learned that the code inside a JavaScript function will execute when "something" invokes it.</p>
+		<p>The code in a function is not executed when the function is <b>defined.</b> It is executed when the function is <b>invoked.</b></p>
+		<p>Some people use the term <b>"call a function"</b> instead of <b>"invoke a function".</b></p>
+		<p>It is also quite common to say "call upon a function", "start a function", or "execute a function".</p>
+		<p>In this tutorial, we will use <b>invoke</b>, because a JavaScript function can be invoked without being called.</p>
+		<h1>Invoking a Function as a Function</h1>
+		<button type="button" class="btn btn-lg btn-success" onclick="invokingAFunctionAsAFunction()">Invoking A Function As A Function</button>
+		<p id="invokingAFunctionAsAFunction"></p>
+		<p>The function above does not belong to any object. But in JavaScript there is always a default global object.</p>
+		<p>In HTML the default global object is the HTML page itself, so the function above "belongs" to the HTML page.</p>
+		<p>In a browser the page object is the browser window. The function above automatically becomes a window function.</p>
+		<p>myFunction() and window.myFunction() is the same function:</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="myFunctionAndWindowFunction()">My Function & Window Function Are Same</button>
+		<p id="myFunctionAndWindowFunction"></p>
+		<p style="background-color:lightyellow">This is a common way to invoke a JavaScript function, but not a very good practice.<br />
+        Global variables, methods, or functions can easily create name conflicts and bugs in the global object.</p>
+		<h1>The Global Object</h1>
+		<p>When a function is called without an owner object, the value of <b>this</b> becomes the global object.</p>
+		<p>In a web browser the global object is the browser window.</p>
+		<p>This example returns the window object as the value of <b>this</b></p>
+		<button type="button" class="btn btn-lg btn-success" onclick="globalObject()">Global Object</button>
+		<p id="globalObject"></p>
+		<p style="background-color:lightyellow">Invoking a function as a global function, causes the value of <b>this</b> to be the global object.<br />
+		Using the window object as a variable can easily crash your program.</p>
+		<h1>Invoking a Function as a Method</h1>
+		<p>In JavaScript you can define function as object methods.</p>
+		<p>The following example creates an object (<b>myObject</b>), with two properties (<b>firstName</b> and <b>lastName</b>), and a method (<b>fullName</b>):</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="invokingFunctionAsAMethod()">Invoking Function As A Method</button>
+		<p id="invokingFunctionAsAMethod"></p>
+		<p>The <b>fullName</b> method is a function. The function belongs to the object. <b>myObject</b> is the owner of the function.</p>
+		<p>The thing called <b>this</b>, is the object that "owns" the JavaScript code. In this case the value of <b>this</b> is <b>myObject.</b> </p>
+		<p>Test it! Change the <b>fullName</b> method to return the value of <b>this</b>:</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="thisMethod()">This Method</button>
+		<p id="thisMethod"></p>
+		<p style="background-color:lightyellow">Invoking a function as an object method, causes the value of this to be the object itself.</p>
+		<h1>Invoking a Function with a Function Constructor</h1>
+		<p>If a function invocation is preceded with the new keyword, it is a constructor invocation.</p>
+		<p>It looks like you create a new function, but since JavaScript functions are objects you actually create a new object:</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="invokingAFunctionWithAFunctionConstructor()">Invoking A Function With A Function Constructor</button>
+		<p id="invokingAFunctionWithAFunctionConstructor"></p>
+		<p>A constructor invocation creates a new object. The new object inherits the properties and methods from its constructor. </p>
+		<p style="background-color:lightyellow">The this keyword in the constructor does not have a value.
+		The value of this will be the new object created when the function is invoked.</p>
+		<h1>Invoking a Function with a Function Method</h1>
+		<p>In JavaScript, functions are objects. JavaScript functions have properties and methods.</p>
+		<p><b>call()</b> and <b>apply()</b> are predefined JavaScript function methods. Both methods can be used to invoke a function, and both methods must have the owner object as first parameter.</p>
+		<button type="button" class="btn btn-lg btn-success" onclick="invokingAFunctionWithAFunctionMethod1()">Invoking A Function With A Function Method</button>
+		<p id="invokingAFunctionWithAFunctionMethod1"></p>
+		<button type="button" class="btn btn-lg btn-success" onclick="invokingAFunctionWithAFunctionMethod2()">Invoking A Function With A Function Method</button>
+		<p id="invokingAFunctionWithAFunctionMethod2"></p>
+		<p>Both methods take an owner object as the first argument. The only difference is that call() takes the function arguments separately, and apply() takes the function arguments in an array.</p>
+		<p>In JavaScript strict mode, the first argument becomes the value of this in the invoked function, even if the argument is not an object.</p>
+		<p>In "non-strict" mode, if the value of the first argument is null or undefined, it is replaced with the global object. </p>
+		<p style="background-color:lightyellow">With call() or apply() you can set the value of <b>this</b>, and invoke a function as a new method of an existing object.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

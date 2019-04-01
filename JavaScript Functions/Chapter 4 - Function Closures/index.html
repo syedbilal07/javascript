@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Function Closures</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Closures</h1>
+		<p>JavaScript variables can belong to the local or global scope.</p>
+		<p>Private variables can be made possible with closures.</p>
+		<h1>Global Variables</h1>
+		<p>A function can access all variables defined inside the function, like this:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionCanAccessVariablesInsideAFunction()">Function Can Access Variables Inside A Function</button>
+		<p id="functionCanAccessVariablesInsideAFunction"></p>
+		<p>But a function can also access variables defined outside the function, like this:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionCanAccessVariablesOutsideTheFunction()">Function Can Access Variables Outside The Function</button>
+		<p id="functionCanAccessVariablesOutsideTheFunction"></p>
+		<p>In the last example, <b>a</b> is a <b>global</b> variable. </p>
+		<p>In a web page, global variables belong to the window object.</p>
+		<p>Global variables can be used (and changed) by all scripts in the page (and in the window). </p>
+		<p>In the first example, <b>a</b> is a <b>local</b> variable.</p>
+		<p>A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.</p>
+		<p>Global and local variables with the same name are different variables. Modifying one, does not modify the other. </p>
+		<p style="background-color:lightyellow">Variables created <b>without</b> the keyword <b>var</b>, are always global, even if they are created inside a function.</p>
+		<h1>Variable Lifetime</h1>
+		<p>Global variables live as long as your application (your window / your web page) lives.</p>
+		<p>Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.</p>
+		<h1>A Counter Dilemma</h1>
+		<p>Suppose you want to use a variable for counting something, and you want this counter to be available to all functions.</p>
+		<p>You could use a global variable, and a function to increase the counter:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="counterDilemma1()">Count!</button>
+		<p id="counterDilemma1"></p>
+		<p>The counter should only be changed by the add() function. </p>
+		<p>The problem is, that any script on the page can change the counter, without calling add().</p>
+		<p>If I declare the counter inside the function, nobody will be able to change it without calling add():</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="counterDilemma2()">Counter Dilemma</button>
+		<p id="counterDilemma2"></p>
+		<p>It did not work! Every time I call the add() function, the counter is set to 1.</p>
+		<p><b>A JavaScript inner function can solve this.</b></p>
+		<h1>JavaScript Nested Functions</h1>
+		<p>All functions have access to the global scope.   </p>
+		<p>In fact, in JavaScript, all functions have access to the scope "above" them.</p>
+		<p>JavaScript supports nested functions. Nested functions have access to the scope "above" them. </p>
+		<p>In this example, the inner function <b>plus()</b> has access to the <b>counter</b> variable in the parent function:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="counterDilemmaUsingInnerFunction()">Counter Dilemma Using Inner Function</button>
+		<p id="counterDilemmaUsingInnerFunction"></p>
+		<p>This could have solved the counter dilemma, if we could reach the <b>plus()</b> function from the outside.</p>
+		<p>We also need to find a way to execute <b>counter = 0</b> only once.</p>
+		<p><b>We need a closure.</b></p>
+		<h1>JavaScript Closures</h1>
+		<p>Remember self-invoking functions? What does this function do?</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="javascriptClosures()">JavaScript Closures</button>
+		<p id="javascriptClosures"></p>
+		<h1>Example Explained</h1>
+		<p>The variable <b>add</b> is assigned the return value of a self-invoking function.</p>
+		<p>The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.</p>
+		<p>This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope. </p>
+		<p>This is called a JavaScript <b>closure.</b> It makes it possible for a function to have <b>"private"</b> variables.</p>
+		<p>The counter is protected by the scope of the anonymous function, and can only be changed using the add function.</p>
+		<p style="background-color:lightyellow">A closure is a function having access to the parent scope, even after the parent function has closed.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

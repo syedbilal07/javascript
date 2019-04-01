@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>BOM Screen</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The window.screen object contains information about the user's screen.</p>
+		<h1>Window Screen</h1>
+		<p>The <b>window.screen</b> object can be written without the window prefix.</p>
+		<p>Properties:</p>
+		<ul>
+			<li>screen.width</li>
+			<li>screen.height</li>
+			<li>screen.availWidth</li>
+			<li>screen.availHeight</li>
+			<li>screen.colorDepth</li>
+			<li>screen.pixelDepth</li>
+		</ul>
+		<h1>Window Screen Width</h1>
+		<p>The screen.width property returns the width of the visitor's screen in pixels.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="screenWidth()">Screen Width</button>
+		<p id="screenWidth"></p>
+		<h1>Window Screen Height</h1>
+		<p>The screen.height property returns the height of the visitor's screen in pixels.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="screenHeight()">Screen Height</button>
+		<p id="screenHeight"></p>
+		<h1>Window Screen Available Width</h1>
+		<p>The screen.availWidth property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="screenAvailableWidth()">Screen Available Width</button>
+		<p id="screenAvailableWidth"></p>
+		<h1>Window Screen Available Height</h1>
+		<p>The screen.availHeight property returns the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="screenAvailableHeight()">Screen Available Height</button>
+		<p id="screenAvailableHeight"></p>
+		<h1>Window Screen Color Depth</h1>
+		<p>The screen.colorDepth property returns the number of bits used to display one color.</p>
+		<p>All modern computers use 24 bit or 32 bit hardware for color resolution:</p>
+		<ul>
+			<li>24 bits =      16,777,216 different "True Colors"</li>
+			<li>32 bits = 4,294,967,296 different "Deep Colors"</li>
+		</ul>
+		<p>Older computers used 16 bits: 65,536 different "High Colors" resolution.</p>
+		<p>Very old computers, and old cell phones used 8 bits: 256 different "VGA colors".</p>
+		<p>Display the color depth of the screen in bits:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="colorDepth()">Color Depth</button>
+		<p id="colorDepth"></p>
+		<p style="background-color:lightyellow">The #rrggbb (rgb) values used in HTML represents "True Colors" (16,777,216 different colors)</p>
+		<h1>Window Screen Pixel Depth</h1>
+		<p>The screen.pixelDepth property returns the pixel depth of the screen.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="screenPixelDepth()">Screen Pixel Depth</button>
+		<p id="screenPixelDepth"></p>
+		<p style="background-color:lightyellow">For modern computers, Color Depth and Pixel Depth are equal.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

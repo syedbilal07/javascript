@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Switch</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Switch Statement</h1>
+		<p>The switch statement is used to perform different actions based on different conditions.</p>
+		<p>Use the switch statement to select one of many blocks of code to be executed.</p>
+		<h4>Syntax</h4>
+		<pre>switch(expression) {
+    case n:
+        code block
+        break;
+    case n:
+        code block
+        break;
+    default:
+        default code block
+} 
+		</pre>
+		<p>This is how it works:</p>
+		<ul>
+			<li>The switch expression is evaluated once.</li>
+			<li>The value of the expression is compared with the values of each case.</li>
+			<li>If there is a match, the associated block of code is executed.</li>
+		</ul>
+		<p>The getDay() method returns the weekday as a number between 0 and 6. (Sunday=0, Monday=1, Tuesday=2 ..)</p>
+		<p>Use the weekday number to calculate weekday name:</p>
+		<button onclick="switchFunction()" class="btn btn-success btn-lg">Switch Case</button>
+		<p id="switchFunction"></p>
+		<h1>The break Keyword</h1>
+		<p>When JavaScript reaches a break keyword, it breaks out of the switch block.</p>
+		<p>This will stop the execution of more code and case testing inside the block.</p>
+		<p>When a match is found, and the job is done, it's time for a break. There is no need for more testing.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  It is not necessary to break the last case in a switch block. It breaks (ends) there anyway. </h2>
+		<h1>The default Keyword</h1>
+		<p>The default keyword specifies the code to run if there is no case match:</p>
+		<p>The getDay() method returns the weekday as a number between 0 and 6.</p>
+		<p>If today is neither Saturday (6) nor Sunday (0), write a default message:</p>
+		<button onclick="defaultFunction()" class="btn btn-success btn-lg">Default Case</button>
+		<p id="defaultFunction"></p>
+		<h1>Common Code and Fall-Through</h1>
+		<p> Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.</p>
+		<p> Note from the next example, that cases can share the same code block, and that the default case does not have to be the
+            last case in a switch block:</p>
+		<button onclick="fallThrough()" class="btn btn-success btn-lg">Fall Through Case</button>
+		<p id="fallThrough"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  If default is not the last case in the switch block, remember to end it with a break. </h2>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

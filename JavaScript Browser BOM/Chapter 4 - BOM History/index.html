@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>BOM History</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The window.history object contains the browsers history.</p>
+		<h1>Window History</h1>
+		<p>The <b>window.history</b> object can be written without the window prefix.</p>
+		<p>To protect the privacy of the users, there are limitations to how JavaScript can access this object.</p>
+		<p>Some methods:</p>
+		<ul>
+			<li>history.back() - same as clicking back in the browser</li>
+			<li>history.forward() - same as clicking forward in the browser</li>
+		</ul>
+		<h1>Window History Back</h1>
+		<p>The history.back() method loads the previous URL in the history list.</p>
+		<p>This is the same as clicking the Back button in the browser.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowHistoryBack()">Window History Back</button>
+		<a href="back.html"><button type="button" class="btn btn-lg btn-default">Go Back</button></a>
+		<h1>Window History Forward</h1>
+		<p>The history forward() method loads the next URL in the history list.</p>
+		<p>This is the same as clicking the Forward button in the browser.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowHistoryForward()">Window History Forward</button>
+		<a href="forward.html"><button type="button" class="btn btn-lg btn-default">Go Forward</button></a>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

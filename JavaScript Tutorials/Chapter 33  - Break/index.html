@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Break</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The break statement "jumps out" of a loop.</p>
+		<p>The continue statement "jumps over" one iteration in the loop.</p>
+		<h1>The Break Statement</h1>
+		<p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch() statement.</p>
+		<p>The break statement can also be used to jump out of a loop.</p>
+		<p>The break statement breaks the loop and continues executing the code after the loop (if any):</p>
+		<button onclick="breakStatement()" class="btn btn-info btn-lg">Break Statement</button>
+		<p id="breakStatement"></p>
+		<h1>The Continue Statement</h1>
+		<p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+		<p>This example skips the value of 3: </p>
+		<button onclick="continueStatement()" class="btn btn-info btn-lg">Continue Statement</button>
+		<p id="continueStatement"></p>
+		<h1>JavaScript Labels</h1>
+		<p>To label JavaScript statements you precede the statements with a label name and a colon:</p>
+		<p>label:<br />
+           statements
+		</p>
+		<p>The break and the continue statements are the only JavaScript statements that can "jump out of" a code block.</p>
+		<h4>Syntax</h4>
+		<p>break labelname;<br /><br />
+		   continue labelname;
+		</p>
+		<p> The continue statement (with or without a label reference) can only be used to skip one loop iteration.</p>
+		<p>The break statement, without a label reference, can only be used to jump out of a loop or a switch.</p>
+		<p>With a label reference, the break statement can be used to jump out of any code block:</p>
+		<button onclick="breakStatementWithLabel()" class="btn btn-info btn-lg">Break Statement With Label Reference</button>
+		<p id="breakStatementWithLabel"></p>
+		<h2>NOTE : -  A code block is a block of code between { and }.</h2>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

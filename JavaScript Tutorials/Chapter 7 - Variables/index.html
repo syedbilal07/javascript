@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Variables</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Variables</h1>
+		<p>JavaScript variables are containers for storing data values.</p>
+		<p>In this example, x, y, and z, are variables:</p>
+		<pre>
+		var x = 5;
+		var y = 6;
+		var z = x + y; 
+		</pre>
+		<p>From the example above, you can expect:</p>
+		<ul>
+			<li>x stores the value 5</li>
+			<li>y stores the value 6</li>
+			<li>z stores the value 11</li>
+		</ul>
+		<h1>Much Like Algebra</h1>
+		<p>In this example, price1, price2, and total, are variables:</p>
+		<pre>
+		var price1 = 5;
+		var price2 = 6;
+		var total = price1 + price2;
+		</pre>
+		<p>In programming, just like in algebra, we use variables (like price1) to hold values.</p>
+		<p>In programming, just like in algebra, we use variables in expressions (total = price1 + price2).</p>
+		<p>From the example above, you can calculate the total to be 11.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - JavaScript variables are containers for storing data values.</h2>
+		<h1>JavaScript Identifiers</h1>
+		<p>All JavaScript variables must be identified with unique names.</p>
+		<p>These unique names are called identifiers.</p>
+		<p>Identifiers can be short names (like x and y), or more descriptive names (age, sum, totalVolume).</p>
+		<p>The general rules for constructing names for variables (unique identifiers) are:</p>
+		<ul>
+			<li>Names can contain letters, digits, underscores, and dollar signs.</li>
+			<li>Names must begin with a letter</li>
+			<li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+			<li>Names are case sensitive (y and Y are different variables)</li>
+			<li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+		</ul>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  JavaScript identifiers are case-sensitive.</h2>
+		<h1>The Assignment Operator</h1>
+		<p>In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.</p>
+		<p>This is different from algebra. The following does not make sense in algebra:</p>
+		<pre>
+		x = x + 5
+		</pre>
+		<p>In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to x.</p>
+		<p>(It calculates the value of x + 5 and puts the result into x. The value of x is incremented by 5.)</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -   The "equal to" operator is written like == in JavaScript.</h2>
+		<p id="demo"></p>
+		<h1>JavaScript Data Types</h1>
+		<p>JavaScript variables can hold numbers like 100, and text values like "John Doe".</p>
+		<p>In programming, text values are called text strings.</p>
+		<p>JavaScript can handle many types of data, but for now, just think of numbers and strings.</p>
+		<p>Strings are written inside double or single quotes. Numbers are written without quotes.</p>
+		<p>If you put quotes around a number, it will be treated as a text string.</p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<h1>JavaScript Variables</h1>
+		<p>Add "5" + 2 + 3. and display the result:</p>
+		<p id="demo3"></p>
+		<h1>Declaring (Creating) JavaScript Variables</h1>
+		<p>Creating a variable in JavaScript is called "declaring" a variable. </p>
+		<p>You declare a JavaScript variable with the var keyword:</p>
+		<pre>
+		var carName; 
+		</pre>
+		<p>After the declaration, the variable has no value. (Technically it has the value of undefined)</p>
+		<p>To assign a value to the variable, use the equal sign:</p>
+		<pre>
+		carName = "Volvo";
+		</pre>
+		<p>You can also assign a value to the variable when you declare it:</p>
+		<pre>
+		var carName = "Volvo";
+		</pre>
+		<p>In the example below, we create a variable called carName and assign the value "Volvo" to it.</p>
+		<p>Then we "output" the value inside an HTML paragraph with id="demo":</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  It's a good programming practice to declare all variables at the beginning of a script.</h2>
+		<h1>One Statement, Many Variables</h1>
+		<p>You can declare many variables in one statement.</p>
+		<p>Start the statement with var and separate the variables by comma:</p>
+		<pre>
+		var person = "John Doe", carName = "Volvo", price = 200; 
+		</pre>
+		<p>A declaration can span multiple lines:</p>
+		<pre>
+		var person = "John Doe",
+		carName = "Volvo",
+		price = 200; 
+		</pre>
+		<h1>Value = undefined</h1>
+		<p>In computer programs, variables are often declared without a value. The value can be something that has to be calculated,
+		or something that will be provided later, like user input.</p>
+		<p>A variable declared without a value will have the value undefined.</p>
+		<p>The variable carName will have the value undefined after the execution of this statement:</p>
+		<pre>
+		var carName; 
+		</pre>
+		<h1>Re-Declaring JavaScript Variables</h1>
+		<p>If you re-declare a JavaScript variable, it will not lose its value.</p>
+		<p>The variable carName will still have the value "Volvo" after the execution of these statements:</p>
+		<pre>
+		var carName = "Volvo";
+		var carName;
+		</pre>		
+		<h1>JavaScript Arithmetic</h1>
+		<p>As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +: </p>
+		<pre>
+		var x = 5 + 2 + 3;
+		</pre>
+		<p>You can also add strings, but strings will be concatenated (added end-to-end):</p>
+		<pre>
+		var x = "John" + " " + "Doe";
+		</pre>
+		<p>Also try this:</p>
+		<pre>
+		var x = "5" + 2 + 3;
+		</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  If you add a number to a string, the number will be treated as string, and concatenated. </h2>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

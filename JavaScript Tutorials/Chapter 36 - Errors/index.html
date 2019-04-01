@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Errors</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Errors - Throw and Try to Catch</h1>
+		<p>The try statement lets you test a block of code for errors.</p>
+		<p>The catch statement lets you handle the error.</p>
+		<p>The throw statement lets you create custom errors.</p>
+		<p>The finally statement lets you execute code, after try and catch, regardless of the result.</p>
+		<h1>Errors Will Happen!</h1>
+		<p>When executing JavaScript code, different errors can occur. </p>
+		<p>Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things:</p>
+		<button onclick="tryCatchError()" class="btn btn-success btn-lg">Try Catch!</button>
+		<p id="tryCatchError"></p>
+		<p>In the example above we have made a typo in the code (in the try block).</p>
+		<p>The catch block catches the error, and executes code to handle it.</p>
+		<h1>JavaScript try and catch</h1>
+		<p>The try statement allows you to define a block of code to be tested for errors while it is being executed.</p>
+		<p>The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.</p>
+		<p>The JavaScript statements try and catch come in pairs:</p>
+		<pre>try {
+    Block of code to try
+}
+catch(err) {
+    Block of code to handle errors
+} 
+		</pre>
+		<h1>JavaScript can Raise Errors</h1>
+		<p>When an error occurs, JavaScript will normally stop, and generate an error message.</p>
+		<p>The technical term for this is: JavaScript will  raise (or throw) an exception.</p>
+		<h1>The throw Statement</h1>
+		<p>The throw statement allows you to create a custom error.</p>
+		<p>Technically you can <b>raise (throw) an exception.</b></p>
+		<p>The exception can be a JavaScript String, a Number, a Boolean or an Object:</p>
+		<p>
+			throw "Too big";    // throw a text<br />
+			throw 500;          // throw a number
+		</p>
+		<p>If you use throw together with try and catch, you can control program flow and generate custom error messages.</p>
+		<h1>Input Validation Example</h1>
+		<p>This example examines input. If the value is wrong, an exception (err) is thrown.</p>
+		<p>The exception (err) is caught by the catch statement and a custom error message is displayed:</p>
+		<input type="text" id="input" class="form-control" placeholder="Please Input A Number 5 & 10"></input>
+		<button onclick="inputValidation()" class="btn btn-success btn-lg">Input Validation</button>
+		<p id="inputValidation"></p>
+		<h1>HTML Validation</h1>
+		<p>The code above is just an example.</p>
+		<p>Modern browsers will often use a combination of JavaScript and built-in HTML validation, using predefined validation
+		rules defined in HTML attributes: </p>
+		<h1>The finally Statement</h1>
+		<p>The finally statement lets you execute code, after try and catch, regardless of the result:</p>
+		<pre>
+		try {
+    Block of code to try
+}
+catch(err) {
+    Block of code to handle errors
+}
+finally {
+    Block of code to be executed regardless of the try / catch result
+}
+		</pre>
+		<input type="text" class="form-control" id="input1" placeholder="Please Input A Number Between 5 & 10"></input>
+		<button onclick="finallyStatement()" class="btn btn-success btn-lg">Finally Statement</button>
+		<p id="finallyStatement"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

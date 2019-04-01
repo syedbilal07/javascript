@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Introduction</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Introduction</h1>
+		<p>This page contains some examples of what JavaScript can do.</p>
+		<h1>JavaScript Can Change HTML Content</h1>
+		<p>One of many JavaScript HTML methods is getElementById().</p>
+		<p>This example uses the method to "find" an HTML element (with id="demo") and changes the element content (innerHTML) to "Hello JavaScript":</p>
+		<p id="demo">JavaScript Can Change HTML Content</p>
+		<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'" class="btn btn-lg btn-success">Click Me</button>
+		<p id="demo1">Date & Time Will Be Displayed Here</p>
+		<button type="button" onclick="document.getElementById('demo1').innerHTML = Date()" class="btn btn-lg btn-success">Click Me To Display Date & Time</button><br /><br />
+		<h1>JavaScript Can Change HTML Attributes</h1>
+		<p>This example changes an HTML image by changing the src (source) attribute of an img tag:</p>
+		<img id="myImage" onclick="changeImage()" src="bulboff.gif" height="180px" width="100px" class="btn btn-lg btn-info" />
+		<p>Click On The Bulb To Turn It On!</p>
+		<h1>JavaScript Can Change HTML Styles (CSS)</h1>
+		<p>Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+		<button type="button" onclick="changeStyle()" class="btn btn-lg btn-success">Click Me To Change HTML Style</button>
+		<p id="demo3">JavaScript Can Change HTML Styles</p>
+		<h1>JavaScript Can Strict User Input</h1>
+		<p>Please input a number between 1 and 10:</p>
+		<input id="numb">
+		<button type="button" onclick="inputValidation()" class="btn btn-lg btn-success">Submit</button>
+		<p id="demos"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

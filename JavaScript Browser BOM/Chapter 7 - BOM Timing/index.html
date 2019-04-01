@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>BOM Timing</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<pre>
+		JavaScript can be executed in time-intervals.
+		This is called timing events.
+		</pre>
+		<h1>Timing Events</h1>
+		<p>The window object allows execution of code at specified time intervals.</p>
+		<p>These time intervals are called timing events.</p>
+		<p>The two key methods to use with JavaScript are:</p>
+		<dl>
+			<dt>setTimeout(function, milliseconds)</dt>
+			<dd>Executes a function, after waiting a specified number of milliseconds.</dd>
+			<dt>setInterval(function, milliseconds)</dt>
+			<dd>Same as setTimeout(), but repeats the execution of the function continuously.</dd>
+		</dl>
+		<p style="background-color:lightyellow">The setTimeout() and setInterval() are both methods of the HTML DOM Window object.</p>
+		<h1>The setTimeout() Method</h1>
+		<pre>
+		window.setTimeout(function, milliseconds);
+		</pre>
+		<p>The <b>window.setTimeout()</b> method can be written without the window prefix.</p>
+		<p>The first parameter is a function to be executed.</p>
+		<p>The second parameter indicates the number of milliseconds before execution.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="setTimeout(setTimeoutMethod,3000)">Set Timeout</button>
+		<h1>How to Stop the Execution?</h1>
+		<p>The clearTimeout() method stops the execution of the function specified in setTimeout().</p>
+		<pre>
+		window.clearTimeout(timeoutVariable)
+		</pre>
+		<p>The <b>window.clearTimeout()</b> method can be written without the window prefix.</p>
+		<p>The clearTimeout() method uses the variable returned from setTimeout():</p>
+		<pre>
+		myVar = setTimeout(function, milliseconds);
+		clearTimeout(myVar);
+		</pre>
+		<p>If the function has not already been executed, you can stop the execution by calling the clearTimeout() method:</p>
+		<div class="btn btn-group btn-inline">
+			<button type="button" class="btn btn-danger btn-lg" onclick="myVar = setTimeout(setTimeoutMethod1,3000)">Set Timeout</button>
+			<button type="button" class="btn btn-warning btn-lg" onclick="clearTimeout(myVar)">Clear Timeout</button>
+		</div>
+		<h1>The setInterval() Method</h1.
+		<p>The setInterval() method repeats a given function at every given time-interval.</p>
+		<pre>
+		window.setInterval(function, milliseconds);
+		</pre>
+		<p>The <b>window.setInterval()</b> method can be written without the window prefix.</p>
+		<p>The first parameter is the function to be executed.</p>
+		<p>The second parameter indicates the length of the time-interval between each execution.</p>
+		<p>This example executes a function called "myTimer" once every second (like a digital watch).</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="setIntervalMethod()">Set Interval</button>
+		<p id="setIntervalMethod"></p>
+		<p style="background-color:lightyellow">There are 1000 milliseconds in one second.</p>
+		<h1>How to Stop the Execution?</h1>
+		<p>The clearInterval() method stops the executions of the function specified in the setInterval() method.</p>
+		<pre>
+		window.clearInterval(timerVariable)
+		</pre>
+		<p>The <b>window.clearInterval()</b> method can be written without the window prefix.</p>
+		<p>The clearInterval() method uses the variable returned from setInterval():</p>
+		<pre>
+		myVar = setInterval(function, milliseconds);
+		clearInterval(myVar);
+		</pre>
+		<button type="button" class="btn btn-info btn-lg" onclick="clearInterval(myVar1)">Clear Interval</button>
+		<p id="clearIntervalMethod"></p>
+		<h1>More Examples</h1>
+		<ul>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing2">Another simple timing</a></li>
+			<h1>Another Simple Timing</h1>
+			<button onclick="timedText()" class="btn btn-info btn-lg">Timed Text</button>
+			<p id="timedText">Click on "Try it". I will display when two, four, and six seconds have passed.</p>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock">A clock created with a timing event</a></li>
+		</ul>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

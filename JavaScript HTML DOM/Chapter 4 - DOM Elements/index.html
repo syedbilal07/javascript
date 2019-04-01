@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM Elements</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<div id="main">
+		<p>This page teaches you how to find and access HTML elements in an HTML page.</p>
+		<h1>Finding HTML Elements</h1>
+		<p>Often, with JavaScript, you want to manipulate HTML elements.</p>
+		<p>To do so, you have to find the elements first. There are a couple of ways to do this:</p>
+		<ul>
+			<li>Finding HTML elements by id</li>
+			<li>Finding HTML elements by tag name </li>
+			<li>Finding HTML elements by class name</li>
+			<li>Finding HTML elements by CSS selectors</li>
+			<li>Finding HTML elements by HTML object collections</li>
+		</ul>
+		<h1>Finding HTML Element by Id</h1>
+		<p>The easiest way to find an HTML element in the DOM, is by using the element id.</p>
+		<p>This example finds the element with id="intro":</p>
+		<p id="intro">Hello World!</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="findingElementsById()">Finding Elements By ID</button>
+		<p id="findingElementsById"></p>
+		<p>If the element is found, the method will return the element as an object (in myElement).</p>
+		<p>If the element is not found, myElement will contain null.</p>
+		<h1>Finding HTML Elements by Tag Name</h1>
+		<p>This example finds all <p> elements:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="findingElementsByTagNames1()">Finding Elements By Tag Names</button>
+		<p id="findingElementsByTagNames1"></p>
+		<p>This example finds the element with id="main", and then finds all p elements inside "main":</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="findingElementsByTagNames2()">Finding Elements By Tag Names</button>
+		<p id="findingElementsByTagNames2"></p>
+		<h1>Finding HTML Elements by Class Name</h1>
+		<p>If you want to find all HTML elements with the same class name, use getElementsByClassName().</p>
+		<p>This example returns a list of all elements with class="intro".</p>
+		<p class="intro">The DOM is very useful.</p>
+		<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="findingElementsByClassNames()">Finding Elements By Class Names</button>
+		<p id="findingElementsByClassNames"></p>
+		<p style="background-color:lightyellow">Finding elements by class name does not work in Internet Explorer 8 and earlier versions.</p>
+		<h1>Finding HTML Elements by CSS Selectors</h1>
+		<p>If you want to find all HTML elements that matches a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.</p>
+		<p>This example returns a list of all p elements with class="intro".</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="findingElementsByCSSSelectors()">Finding Elements By CSS Selectors</button>
+		<p id="findingElementsByCSSSelectors"></p>
+		<p style="background-color:lightyellow">The querySelectorAll() method does not work in Internet Explorer 8 and earlier versions.</p>
+		<h1>Finding HTML Elements by HTML Object Collections</h1>
+		<p>This example finds the form element with id="frm1", in the forms collection, and displays all element values:</p>
+		<form id="frm1" role="form">
+		<div class="form-group">
+			First name: <input class="form-control" name="firstname" value="Syed"><br />
+			Last name: <input class="form-control" name="lastname" value="Bilal"><br /><br />
+			<button type="submit" class="btn btn-default">Submit</button>
+		</div>
+		</form> 
+		<button type="button" class="btn btn-success btn-lg" onclick="findingElementsByHTMLObjectCollections()">Finding Elements By HTML Object Collections</button>
+		<p id="findingElementsByHTMLObjectCollections"></p>
+		<p>The following HTML objects (and object collections) are also accessible:</p>
+		<ul>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_anchors">document.anchors</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_body">document.body</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_element">document.documentElement</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_embeds">document.embeds</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_forms">document.forms</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_head">document.head</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_images">document.images</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_links">document.links</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_scripts">document.scripts</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_title">document.title</a></li>
+		</ul>
+		</div>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

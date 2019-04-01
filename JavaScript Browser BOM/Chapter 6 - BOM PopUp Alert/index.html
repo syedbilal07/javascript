@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>BOM PopUp Alert</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.</p>
+		<h1>Alert Box</h1>
+		<p>An alert box is often used if you want to make sure information comes through to the user.</p>
+		<p>When an alert box pops up, the user will have to click "OK" to proceed.</p>
+		<h2>Syntax</h2>
+		<pre>
+		window.alert("sometext");
+		</pre>
+		<p>The <b>window.alert()</b> method can be written without the window prefix.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowAlert()">Window Alert</button>
+		<p id="windowAlert"></p>
+		<h1>Confirm Box</h1>
+		<p>A confirm box is often used if you want the user to verify or accept something.</p>
+		<p>When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. </p>
+		<p>If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.</p>
+		<h2>Syntax</h2>
+		<pre>
+		window.confirm("sometext");
+		</pre>
+		<p>The <b>window.confirm()</b> method can be written without the window prefix.<p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowConfirm()">Window Confirm</button>
+		<p id="windowConfirm"></p>
+		<h1>Prompt Box</h1>
+		<p>A prompt box is often used if you want the user to input a value before entering a page.</p>
+		<p>When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value. </p>
+		<p>If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.</p>
+		<h2>Syntax</h2>
+		<pre>
+		window.prompt("sometext","defaultText");
+		</pre>
+		<p>The <b>window.prompt()</b> method can be written without the window prefix.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowPrompt()">Window Prompt</button>
+		<p id="windowPrompt"></p>
+		<h1>Line Breaks</h1>
+		<p>To display line breaks inside a popup box, use a back-slash followed by the character n.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="lineBreaks()">Line Breaks</button>
+		<p id="lineBreaks"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

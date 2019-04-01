@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Output</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JS Output</h1>
+		<p>JavaScript does NOT have any built-in print or display functions.</p>
+		<h1>JavaScript Display Possibilities</h1>
+		<p>JavaScript can "display" data in different ways:</p>
+		<ul>
+			<li>Writing into an alert box, using window.alert().</li>
+			<li>Writing into the HTML output using document.write().</li>
+			<li>Writing into an HTML element, using innerHTML.</li>
+			<li>Writing into the browser console, using console.log().</li>
+		</ul>
+		<h1>Using window.alert()</h1>
+		<p>You can use an alert box to display data:</p>
+		<pre>
+		window.alert(5 + 6);
+		</pre>
+		<h1>Using document.write()</h1>
+		<p>For testing purposes, it is convenient to use document.write():</p>
+		<pre>
+		document.write(5 + 6);
+		</pre>
+		<p>Using document write after an HTML document is fully loaded, will delete all existing HTML</p>
+		<button type="button" onclick="document.write(5+8)" class="btn btn-lg btn-info">Try It</button>
+		<p id="demo"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - The document.write() method should be used only for testing.</h2>
+		<h1>Using innerHTML</h1>
+		<p>To access an HTML element, JavaScript can use the document.getElementById(id) method. </p>
+		<p>The id attribute defines the HTML element. The innerHTML property defines the HTML content:</p>
+		<pre>
+		document.getElementById("demo").innerHTML = 5 + 6;
+		</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - To "display data" in HTML, (in most cases) you will set the value of an innerHTML property.</h2>
+		<h1>Using console.log()</h1>
+		<p>In your browser, you can use the console.log() method to display data.</p>
+		<p>Activate the browser console with F12, and select "Console" in the menu.</p>
+		<pre>
+		console.log(5 + 6);
+		</pre>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

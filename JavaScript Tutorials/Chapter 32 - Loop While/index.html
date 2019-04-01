@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Loop While</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript While Loop</h1>
+		<p>Loops can execute a block of code as long as a specified condition is true.</p>
+		<h1>The While Loop</h1>
+		<p>The while loop loops through a block of code as long as a specified condition is true.</p>
+		<h4>Syntax</h4>
+		<pre>while (condition) {
+    code block to be executed
+}
+		</pre>
+		<p>In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:</p>
+		<button onclick="whileLoop()" class="btn btn-success btn-lg">WHILE Loop</button>
+		<p id="whileLoop"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser.</h2>
+		<h1>The Do/While Loop</h1>
+		<p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition
+		   is true, then it will repeat the loop as long as the condition is true.</p>
+		<h4>Syntax</h4>
+		<pre>do {
+    code block to be executed
+}
+while (condition);
+		</pre>
+		<p>The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false,
+		because the code block is executed before the condition is tested:</p>
+		<button onclick="doWhileLoop()" class="btn btn-success btn-lg">DO WHILE Loop</button>
+		<p id="doWhileLoop"></p>
+		<p>Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+		<h1>Comparing For and While</h1>
+		<p>If you have read the previous chapter, about the for loop, you will discover that a while loop is much the same as a for loop,
+		with statement 1 and statement 3 omitted.</p>
+		<p>The loop in this example uses a for loop to collect the car names from the cars array:</p>
+		<button onclick="forLoop()" class="btn btn-success btn-lg">FOR Loop</button>
+		<p id="forLoop"></p>
+		<p>The loop in this example uses a while loop to collect the car names from the cars array:</p>
+		<button onclick="whileLoop1()" class="btn btn-success btn-lg">WHILE Loop</button>
+		<p id="whileLoop1"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

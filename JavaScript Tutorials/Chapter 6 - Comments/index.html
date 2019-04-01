@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Comments</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Comments</h1>
+		<p>JavaScript comments can be used to explain JavaScript code, and to make it more readable.</p>
+		<p>JavaScript comments can also be used to prevent execution, when testing alternative code.</p>
+		<h1>Single Line Comments</h1>
+		<p>Single line comments start with //.</p>
+		<p>Any text between // and the end of the line will be ignored by JavaScript (will not be executed).</p>
+		<p>This example uses a single-line comment before each code line:</p>
+		<pre>
+		// Change heading:
+		document.getElementById("myH").innerHTML = "My First Page";
+		// Change paragraph:
+		document.getElementById("myP").innerHTML = "My first paragraph."; 
+		</pre>
+		<p>This example uses a single line comment at the end of each line to explain the code:</p>
+		<pre>
+		 var x = 5;      // Declare x, give it the value of 5
+		var y = x + 2;  // Declare y, give it the value of x + 2 
+		</pre>
+		<h1>Multi-line Comments</h1>
+		<p>Multi-line comments start with /* and end with */.</p>
+		<p>Any text between /* and */ will be ignored by JavaScript.</p>
+		<p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+		<pre>
+		/*
+		The code below will change
+		the heading with id = "myH"
+		and the paragraph with id = "myP"
+		in my web page:
+		*/
+		document.getElementById("myH").innerHTML = "My First Page";
+		document.getElementById("myP").innerHTML = "My first paragraph."; 		
+		</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  	It is most common to use single line comments.<br />
+		Block comments are often used for formal documentation.</h2>
+		<h1>Using Comments to Prevent Execution</h1>
+		<p>Using comments to prevent execution of code is suitable for code testing.</p>
+		<p>Adding // in front of a code line changes the code lines from an executable line to a comment.</p>
+		<p>This example uses // to prevent execution of one of the code lines:</p>
+		<pre>
+		//document.getElementById("myH").innerHTML = "My First Page";
+		document.getElementById("myP").innerHTML = "My first paragraph."; 
+		</pre>
+		<p>This example uses a comment block to prevent execution of multiple lines:</p>
+		<pre>
+		/*
+		document.getElementById("myH").innerHTML = "My First Page";
+		document.getElementById("myP").innerHTML = "My first paragraph.";
+		*/	
+		</pre>
+		<h1 id="demo"></h1>
+		<p id="demo1"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

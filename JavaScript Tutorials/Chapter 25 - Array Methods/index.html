@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Array Methods</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The strength of JavaScript arrays lies in the array methods.</p>
+		<h1>Converting Arrays to Strings</h1>
+		<p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+		<button onclick="toStringMethod()" class="btn btn-success btn-lg">Convert Array To String</button>
+		<p id="toStringMethod"></p>
+		<p>The join() method also joins all array elements into a string.</p>
+		<p>It behaves just like toString(), but in addition you can specify the separator:</p>
+		<button onclick="joinMethod()" class="btn btn-success btn-lg">Join Array</button>
+		<p id="joinMethod"></p>
+		<h1>Popping and Pushing</h1>
+		<p>When you work with arrays, it is easy to remove elements and add new elements.</p>
+		<p>This is what popping and pushing is:</p>
+		<p>Popping items out of an array, or pushing items into an array.</p>
+		<h1>Popping</h1>
+		<p>The pop() method removes the last element from an array:</p>
+		<button onclick="popMethod()" class="btn btn-success btn-lg">Pop Method</button>
+		<p id="popMethod"></p>
+		<p>The pop() method returns the value that was "popped out":</p>
+		<button onclick="popMethodValue()" class="btn btn-success btn-lg">Pop Method</button>
+		<p id="popMethodValue"></p>
+		<h1>Pushing</h1>
+		<p>The push() method adds a new element to an array (at the end):</p>
+		<button onclick="pushMethod()" class="btn btn-success btn-lg">Push Method</button>
+		<p id="pushMethod"></p>
+		<p>The push() method returns the new array length:</p>
+		<button onclick="pushMethodArrayLength()" class="btn btn-success btn-lg">Push Method</button>
+		<p id="pushMethodArrayLength"></p>
+		<h1>Shifting Elements</h1>
+		<p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
+		<p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+		<button onclick="shiftMethod()" class="btn btn-success btn-lg">Shift Method</button>
+		<p id="shiftMethod"></p>
+		<p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements: </p>
+		<button onclick="unshiftMethod()" class="btn btn-success btn-lg">UnShift Method</button>
+		<p id="unshiftMethod"></p>
+		<p>The shift() method returns the string that was "shifted out".</p>
+		<p>The unshift() method returns the new array length.</p>
+		<h1>Changing Elements</h1>
+		<p>Array elements are accessed using their index number:</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  Array indexes start with 0. [0] is the first array element, [1] is the second, [2] is the third ....</h2>
+		<button onclick="changingArrayElements()" class="btn btn-success btn-lg">Changing Array Elements</button>
+		<p id="changingArrayElements"></p>
+		<p>The length property provides an easy way to append a new element to an array:</p>
+		<button onclick="changingArrayElementsLength()" class="btn btn-success btn-lg">Changing Array Elements Using Length Property</button>
+		<p id="changingArrayElementsLength"></p>
+		<h1>Deleting Elements</h1>
+		<p>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete: </p>
+		<button onclick="deletingElements()" class="btn btn-success btn-lg">Deleting Elements</button>
+		<p id="deletingElements"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Using delete may leave undefined holes in the array. Use pop() or shift() instead.</h2>
+		<h1>Splicing an Array</h1>
+		<p>The splice() method can be used to add new items to an array: </p>
+		<button onclick="spliceMethod()" class="btn btn-success btn-lg">Splice Method</button>
+		<p id="spliceMethod"></p>
+		<p>The first parameter (2) defines the position where new elements should be added (spliced in).</p>
+		<p>The second parameter (0) defines how many elements should be removed.</p>
+		<p>The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.</p>
+		<h1>Using splice() to Remove Elements</h1>
+		<p>With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:</p>
+		<button onclick="spliceMethodRemove()" class="btn btn-success btn-lg">Splice Method Remove Elements</button>
+		<p id="spliceMethodRemove"></p>
+		<p>The first parameter (0) defines the position where new elements should be added (spliced in).</p>
+		<p>The second parameter (1) defines how many elements should be removed.</p>
+		<p>The rest of the parameters are omitted. No new elements will be added.</p>
+		<h1>Joining Arrays</h1>
+		<p>The concat() method creates a new array by concatenating two arrays:</p>
+		<button onclick="concatMethod()" class="btn btn-success btn-lg">Concat Method</button>
+		<p id="concatMethod"></p>
+		<p>The concat() method can take any number of array arguments:</p>
+		<button onclick="concatMethodArguments()" class="btn btn-success btn-lg">Concat Method Takes Many Arguments</button>
+		<p id="concatMethodArguments"></p>
+		<h1>Slicing an Array</h1>
+		<p>The slice() method slices out a piece of an array into a new array.</p>
+		<p>This example slices out a part of an array starting from array element 1 ("Orange"):</p>
+		<button onclick="sliceMethod()" class="btn btn-success btn-lg">Slice Method</button>
+		<p id="sliceMethod"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Array indexes start with 0. [0] is the first array element, [1] is the second, [2] is the third ....</h2>
+		<p>This example slices out a part of an array starting from array element 3 ("Apple"):</p>
+		<button onclick="sliceMethodArray()" class="btn btn-success btn-lg">Slice Method</button>
+		<p id="sliceMethodArray"></p>
+		<p>The slice() method can take two arguments like slice(1,3).</p>
+		<p>The method then selects elements from the start argument, and up to (but not including) the end argument.</p>
+		<button onclick="sliceMethodArrayArguments()" class="btn btn-success btn-lg">Slice Method Array Arguments</button>
+		<p id="sliceMethodArrayArguments"></p>
+		<p>If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.</p>
+		<h1>The valueOf() Method</h1>
+		<p>The valueOf() method is the default behavior for an array. It converts an array to a primitive value.</p>
+		<p>JavaScript will automatically convert an array to a string when a primitive value is expected.</p>
+		<p>Because of this, all these examples will produce the same result:</p>
+		<button onclick="valueOfMethod()" class="btn btn-success btn-lg">ValueOf Method</button>
+		<p id="valueOfMethod"></p>
+		<button onclick="valueOf1()" class="btn btn-success btn-lg">ValueOf Method</button>
+		<p id="valueOf1"></p>
+		<button onclick="valueOf2()" class="btn btn-success btn-lg">ValueOf Method</button>
+		<p id="valueOf2"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

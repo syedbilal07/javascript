@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Date Methods</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>Date methods let you get and set date values (years, months, days, hours, minutes, seconds, milliseconds)</p>
+		<h1>Date Get Methods</h1>
+		<p>Get methods are used for getting a part of a date. Here are the most common (alphabetically):</p>
+		<dl>
+			<dt>getDate()</dt>
+			<dd>Get the day as a number (1-31)</dd>
+			<dt>getDay()</dt>
+			<dd>Get the weekday as a number (0-6)</dd>
+			<dt>getFullYear()</dt>
+			<dd>Get the four digit year (yyyy)</dd>
+			<dt>getHours()</dt>
+			<dd>Get the hour (0-23)</dd>
+			<dt>getMilliseconds()</dt>
+			<dd>Get the milliseconds (0-999)</dd>
+			<dt>getMinutes()</dt>
+			<dd>Get the minutes (0-59)</dd>
+			<dt>getMonth()</dt>
+			<dd>Get the month (0-11)</dd>
+			<dt>getSeconds()</dt>
+			<dd>Get the seconds (0-59)</dd>
+			<dt>getTime()</dt>
+			<dd>Get the time (milliseconds since January 1, 1970)</dd>
+		</dl>
+		<h1>The getTime() Method</h1>
+		<p>getTime() returns the number of milliseconds since January 1, 1970:</p>
+		<button onclick="getTime()" class="btn btn-success btn-lg">Get Time</button>
+		<p id="getTime"></p>
+		<h1>The getFullYear() Method</h1>
+		<p>getFullYear() returns the year of a date as a four digit number:</p>
+		<button onclick="getFullYear()" class="btn btn-success btn-lg">Get Full Year</button>
+		<p id="getFullYear"></p>
+		<h1>The getDay() Method</h1>
+		<p>getDay() returns the weekday as a number (0-6):</p>
+		<button onclick="getDay()" class="btn btn-success btn-lg">Get Day</button>
+		<p id="getDay"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  In JavaScript, the first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday".</h2>
+		<p>You can use an array of names, and getDay() to return the weekday as a name:</p>
+		<button onclick="getDayUsingArray()" class="btn btn-success btn-lg">Get Day Using Array</button>
+		<p id="getDayUsingArray"></p>
+		<h1>Date Set Methods</h1>
+		<p>Set methods are used for setting a part of a date. Here are the most common (alphabetically):</p>
+		<dl>
+			<dd>setDate()</dd>
+			<dt>Set the day as a number (1-31)</dt>
+			<dd>setFullYear()</dd>
+			<dt>Set the year (optionally month and day)</dt>
+			<dd>setHours()</dd>
+			<dt>Set the hour (0-23)</dt>
+			<dd>setMilliseconds()</dd>
+			<dt>Set the milliseconds (0-999)</dt>
+			<dd>setMinutes()</dd>
+			<dt>Set the minutes (0-59)</dt>
+			<dd>setMonth()</dd>
+			<dt>Set the month (0-11)</dt>
+			<dd>setSeconds()</dd>
+			<dt>Set the seconds (0-59)</dt>
+			<dd>setTime()</dd>
+			<dt>Set the time (milliseconds since January 1, 1970)</dt>
+		</dl>
+		<h1>The setFullYear() Method</h1>
+		<p>setFullYear() sets a date object to a specific date. In this example, to January 14, 2020:</p>
+		<button onclick="setFullYear()" class="btn btn-success btn-lg">Set Full Year</button>
+		<p id="setFullYear"></p>
+		<h1>The setDate() Method</h1>
+		<h1>The setDate() Method</h1>
+		<p>setDate() sets the day of the month (1-31):</p>
+		<button onclick="setDate()" class="btn btn-success btn-lg">Set Date</button>
+		<p id="setDate"></p>
+		<p>The setDate() method can also be used to add days to a date:</p>
+		<button onclick="setDate1()" class="btn btn-success btn-lg">Set Date 1</button>
+		<p id="setDate1"></p>
+		<p>If adding days, shifts the month or year, the changes are handled automatically by the Date object.</p>
+		<h1>Date Input - Parsing Dates</h1>
+		<p>If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.</p>
+		<p>Date.parse() returns the number of milliseconds between the date and January 1, 1970:</p>
+		<button onclick="dateInput()" class="btn btn-success btn-lg">Date Input</button>
+		<p id="dateInput"></p>
+		<p>You can then use the number of milliseconds to convert it to a date object:</p>
+		<button onclick="dateInputMilliSeconds()" class="btn btn-success btn-lg">Date Input Milli Seconds</button>
+		<p id="dateInputMilliSeconds"></p>
+		<h1>Compare Dates</h1>
+		<p>Dates can easily be compared.</p>
+		<p>The following example compares today's date with January 14, 2100:</p>
+		<button onclick="dateCompare()" class="btn btn-success btn-lg">Date Compare</button>
+		<p id="dateCompare"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - JavaScript counts months from 0 to 11. January is 0. December is 11.</h2>
+		<h1>UTC Date Methods</h1>
+		<p>UTC date methods are used for working UTC dates (Univeral Time Zone dates):</p>
+		<dl>
+			<dt>getUTCDate()</dt>
+			<dd>Same as getDate(), but returns the UTC date</dd>
+			<dt>getUTCDay()</dt>
+			<dd>Same as getDay(), but returns the UTC day</dd>
+			<dt>getUTCFullYear()</dt>
+			<dd>Same as getFullYear(), but returns the UTC year</dd>
+			<dt>getUTCHours()</dt>
+			<dd>Same as getHours(), but returns the UTC hour</dd>
+			<dt>getUTCMilliseconds()</dt>
+			<dd>Same as getMilliseconds(), but returns the UTC milliseconds</dd>
+			<dt>getUTCMinutes()</dt>
+			<dd>Same as getMinutes(), but returns the UTC minutes</dd>
+			<dt>getUTCMonth()</dt>
+			<dd>Same as getMonth(), but returns the UTC month</dd>
+			<dt>getUTCSeconds()</dt>
+			<dd>Same as getSeconds(), but returns the UTC seconds</dd>
+		</dl>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

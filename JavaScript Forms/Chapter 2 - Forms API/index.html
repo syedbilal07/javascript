@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Forms API</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>Constraint Validation DOM Methods</h1>
+		<dl>
+			<dt>checkValidity()</dt>
+			<dd>Returns true if an input element contains valid data.</dd>
+			<dt>setCustomValidity()</dt>
+			<dd>Sets the validationMessage property of an input element.</dd>
+		</dl>
+		<p>If an input field contains invalid data, display a message:</p>
+		<h1>The checkValidity() Method</h1>
+		<p>Enter a number and click OK:</p>
+		<input id="checkValidityMethod" type="number" min="100" max="300">
+		<button type="button" class="btn btn-success btn-lg" onclick="checkValidation()">Check Validity</button>
+		<p id="checkValidity"></p>
+		<p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+		<h1>Constraint Validation DOM Properties</h1>
+		<dl>
+			<dt>validity</dt>
+			<dd>Contains boolean properties related to the validity of an input element.</dd>
+			<dt>validationMessage</dt>
+			<dd>Contains the message a browser will display when the validity is false.</dd>
+			<dt>willValidate</dt>
+			<dd>Indicates if an input element will be validated.</dd>
+		</dl>
+		<h1>Validity Properties</h1>
+		<p>The validity property of an input element contains a number of properties related to the validity of data: </p>
+		<dl>
+			<dt>customError</dt>
+			<dd>Set to true, if a custom validity message is set.</dd>
+			<dt>patternMismatch</dt>
+			<dd>Set to true, if an element's value does not match its pattern attribute.</dd>
+			<dt>rangeOverflow</dt>
+			<dd>Set to true, if an element's value is greater than its max attribute.</dd>
+			<dt>rangeUnderflow</dt>
+			<dd>Set to true, if an element's value is less than its min attribute.</dd>
+			<dt>stepMismatch</dt>
+			<dd>Set to true, if an element's value is invalid per its step attribute.</dd>
+			<dt>tooLong</dt>
+			<dd>Set to true, if an element's value exceeds its maxLength attribute.</dd>
+			<dt>typeMismatch</dt>
+			<dd>Set to true, if an element's value is invalid per its type attribute.</dd>
+			<dt>valueMissing</dt>
+			<dd>Set to true, if an element (with a required attribute) has no value.</dd>
+			<dt>valid</dt>
+			<dd>Set to true, if an element's value is valid.</dd>
+		</dl>
+		<p>If the number in an input field is greater than 100 (the input's max attribute), display a message:</p>
+		<h1>The rangeOverflow Property</h1>
+		<p>Enter a number and click OK:</p>
+		<input id="inputRangeOverflow" type="number" max="100" class="form-control">
+		<button type="button" onclick="checkRangeOverflowMethod()" class="btn btn-success btn-lg">Range Overflow</button>
+		<p id="rangeOverflow"></p>
+		<p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+		<p>If the number in an input field is less than 100 (the input's min attribute), display a message:</p>
+		<h1>The rangeUnderflow Property</h1>
+		<p>Enter a number and click OK:</p>
+		<input id="inputRangeUnderflow" type="number" class="form-control" min="100"></input>
+		<button type="button" class="btn btn-success btn-lg" onclick="rangeUnderflowMethod()">Range Underflow</button>
+		<p id="rangeUnderflow"></p>
+		<p>If the number is less than 100 (the input's min attribute), an error message will be displayed.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

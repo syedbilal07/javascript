@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Function Parameters</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Function Parameters</h1>
+		<p>A JavaScript function does not perform any checking on parameter values (arguments).</p>
+		<h1>Function Parameters and Arguments</h1>
+		<p>Earlier in this tutorial, you learned that functions can have parameters:</p>
+		<pre>
+		functionName(parameter1, parameter2, parameter3) {
+    code to be executed
+} 
+		</pre>
+		<p>Function parameters are the names listed in the function definition.</p>
+		<p>Function arguments are the real values passed to (and received by) the function.</p>
+		<h1>Parameter Rules</h1>
+		<p>JavaScript function definitions do not specify data types for parameters.</p>
+		<p>JavaScript functions do not perform type checking on the passed arguments.</p>
+		<p>JavaScript functions do not check the number of arguments received.</p>
+		<h1>Parameter Defaults</h1>
+		<p>If a function is called with missing arguments (less than declared), the missing values are set to: undefined </p>
+		<p>Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="parameterDefaults()">Parameter Defaults</button>
+		<p id="parameterDefaults"></p>
+		<p>If a function is called with too many arguments (more than declared), these arguments can be reached using the arguments object.</p>
+		<h1>The Arguments Object</h1>
+		<p>JavaScript functions have a built-in object called the arguments object.</p>
+		<p>The argument object contains an array of the arguments used when the function was called (invoked).</p>
+		<p>This way you can simply use a function to find (for instance) the highest value in a list of numbers:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="argumentsObject()">Arguments Object</button>
+		<p id="argumentsObject"></p>
+		<p>Or create a function to sum all input values:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionForInputValues()">Function For Input Values</button>
+		<p id="functionForInputValues"></p>
+		<h1>Arguments are Passed by Value</h1>
+		<p>The parameters, in a function call, are the function's arguments.</p>
+		<p>JavaScript arguments are passed by <b>value</b>: The function only gets to know the values, not the argument's locations.</p>
+		<p>If a function changes an argument's value, it does not change the parameter's original value.</p>
+		<p><b>Changes to arguments are not visible (reflected) outside the function.</b></p>
+		<h1>Objects are Passed by Reference</h1>
+		<p>In JavaScript, object references are values.</p>
+		<p>Because of this, objects will behave like they are passed by <b>reference:</b></p>
+		<p>If a function changes an object property, it changes the original value.</p>
+		<p><b>Changes to object properties are visible (reflected) outside the function.</b></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

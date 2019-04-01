@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Number Methods</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>Number methods help you work with numbers.</p>
+		<h1>Number Methods and Properties</h1>
+		<p>Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects). </p>
+		<p>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+		<h1>The toString() Method</h1>
+		<p>toString() returns a number as a string.</p>
+		<p>All number methods can be used on any type of numbers (literals, variables, or expressions):</p>
+		<button onclick="StringConvert()" class="btn btn-success btn-lg">toString Convert</button>
+		<p id="StringConvert"></p>
+		<h1>The toExponential() Method</h1>
+		<p>toExponential() returns a string, with a number rounded and written using exponential notation.</p>
+		<p>A parameter defines the number of characters behind the decimal point:</p>
+		<button onclick="toExponential()" class="btn btn-success btn-lg">toExponential Convert</button>
+		<p id="toExponential"></p>
+		<p>The parameter is optional. If you don't specify it, JavaScript will not round the number.</p>
+		<h1>The toFixed() Method</h1>
+		<p>toFixed() returns a string, with the number written with a specified number of decimals:</p>
+		<button onclick="toFixed()" class="btn btn-success btn-lg">toFixed Convert</button>
+		<p id="toFixed"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - toFixed(2) is perfect for working with money.</h2>
+		<h2>The toPrecision() Method</h2>
+		<p>toPrecision() returns a string, with a number written with a specified length:</p>
+		<button onclick="toPrecision()" class="btn btn-success btn-lg">toPrecision Convert</button>
+		<p id="toPrecision"></p>
+		<h1>The valueOf() Method</h1>
+		<p>valueOf() returns a number as a number.</p>
+		<button onclick="valueOfNumber()" class="btn btn-success btn-lg">valueOfNumber</button>
+		<p id="valueOfNumber"></p>
+		<p>In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object).</p>
+		<p>The valueOf() method is used internally in JavaScript to convert Number objects to primitive values.</p>
+		<p>There is no reason to use it in your code.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - In JavaScript, all data types have a valueOf() and a toString() method.</h2>
+		<h1>Converting Variables to Numbers</h1>
+		<p>There are 3 JavaScript methods that can be used to convert variables to numbers:</p>
+		<p>The Number() method</p>
+		<p>The parseInt() method</p>
+		<p>The parseFloat() method</p>
+		<p>These methods are not number methods, but global JavaScript methods.</p>
+		<h1>Global Methods</h1>
+		<p>JavaScript global methods can be used on all JavaScript data types.</p>
+		<p>These are the most relevant methods, when working with numbers:</p>
+		<p>Number() : - Returns a number, converted from its argument.</p>
+		<p>parseFloat() : - Parses its argument and returns a floating point number</p>
+		<p>parseInt() : - Parses its argument and returns an integer</p>
+		<h1>The Number() Method</h1>
+		<p>Number() can be used to convert JavaScript variables to numbers:</p>
+		<button onclick="Numbers()" class="btn btn-success btn-lg">Number</button>
+		<p id="Numbers"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE  : -  Used on Date(), the Number() method returns the number of milliseconds since 1.1.1970. </h2>
+		<h1>The parseInt() Method</h1>
+		<p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+		<button onclick="parseIntNumber()" class="btn btn-success btn-lg">parseInt</button>
+		<p id="parseIntNumber"></p>
+		<p>If the number cannot be converted, NaN (Not a Number) is returned.</p>
+		<h2>The parseFloat() Method</h2>
+		<p>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:</p>
+		<button onclick="parseFloatNumber()" class="btn btn-success btn-lg">parseFloat</button>
+		<p id="parseFloatNumber"></p>
+		<h1>Number Properties</h1>
+		<p>MAX_VALUE : - Returns the largest number possible in JavaScript</p>
+		<p>MIN_VALUE : - Returns the smallest number possible in JavaScript</p>
+		<p>NEGATIVE_INFINITY : - Represents negative infinity (returned on overflow)</p>
+		<p>NaN : - Represents a "Not-a-Number" value</p>
+		<p>POSITIVE_INFINITY : - Represents infinity (returned on overflow)</p>
+		<button onclick="maxNumber()" class="btn btn-success btn-lg">maxNumber</button>
+		<p id="maxNumber"></p>
+		<p>Number properties belongs to the JavaScript's number object wrapper called Number.</p>
+		<p>These properties can only be accessed as Number.MAX_VALUE.</p>
+		<p>Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined:</p>
+		<button onclick="maxNumber1()" class="btn btn-success btn-lg">maxNumber</button>
+		<p id="maxNumber1"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

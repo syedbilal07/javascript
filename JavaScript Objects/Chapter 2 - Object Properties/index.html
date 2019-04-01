@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Object Properties</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>Properties are the most important part of any JavaScript object.</p>
+		<p>Properties are the values associated with a JavaScript object.</p>
+		<p>A JavaScript object is a collection of unordered properties.</p>
+		<p>Properties can usually be changed, added, and deleted, but some are read only.</p>
+		<h1>Accessing JavaScript Properties</h1>
+		<p>The syntax for accessing the property of an object is:</p>
+		<pre>
+		objectName.property          // person.age
+		</pre>
+		<p>or</p>
+		<pre>
+		objectName["property"]       // person["age"]
+		</pre>
+		<p>or</p>
+		<pre>
+		objectName[expression]       // x = "age"; person[x]
+		</pre>
+		<p style="background-color:lightyellow">The expression must evaluate to a property name.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="accessingProperty1()">Accessing Property</button>
+		<p id="accessingProperty1"></p>
+		<button type="button" class="btn btn-success btn-lg" onclick="accessingProperty2()">Accessing Property</button>
+		<p id="accessingProperty2"></p>
+		<h1>JavaScript for...in Loop</h1>
+		<p>The JavaScript for...in statement loops through the properties of an object.</p>
+		<pre>
+		for (variable in object) {
+    code to be executed
+}
+		</pre>
+		<p>The block of code inside of the for...in loop will be executed once for each property.</p>
+		<p>Looping through the properties of an object:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="loopingInProperty()">Looping In Property</button>
+		<p id="loopingInProperty"></p>
+		<h1>Adding New Properties</h1>
+		<p>You can add new properties to an existing object by simply giving it a value. </p>
+		<p>Assume that the person object already exists - you can then give it new properties:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="addingNewProperty()">Adding New Property</button>
+		<p id="addingNewProperty"></p>
+		<p style="background-color:lightyellow">You cannot use reserved words for property (or method) names. JavaScript naming rules apply.</p>
+		<h1>Deleting Properties</h1>
+		<p>The delete keyword deletes a property from an object:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="deletingProperty()">Deleting Property</button>
+		<p id="deletingProperty"></p>
+		<p>The delete keyword deletes both the value of the property and the property itself.</p>
+		<p>After deletion, the property cannot be used before it is added back again.</p>
+		<p>The delete operator is designed to be used on object properties. It has no effect on variables or functions. </p>
+		<p>The delete operator should not be used on predefined JavaScript object properties. It can crash your application.</p>
+		<h1>Property Attributes</h1>
+		<p>All properties have a name. In addition they also have a value.</p>
+		<p>The value is one of the property's attributes.</p>
+		<p>Other attributes are: enumerable, configurable, and writable.</p>
+		<p>These attributes define how the property can be accessed (is it readable?, is it writable?)</p>
+		<p>In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).</p>
+		<p>( ECMAScript 5 has methods for both getting and setting all property attributes)</p>
+		<h1>Prototype Properties</h1>
+		<p>JavaScript objects inherit the properties of their prototype. </p>
+		<p>The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

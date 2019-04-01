@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JSON</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<!DOCTYPE html>
+<html>
+	<head>
+	<title>JSON</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library (3.3.6)/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library (3.3.6)/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library (3.3.6)/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript JSON</h1>
+		<p>JSON is a format for storing and transporting data.</p>
+		<p>JSON is often used when data is sent from a server to a web page. </p>
+		<h1>What is JSON?</h1>
+		<ul>
+			<li>JSON stands for JavaScript Object Notation</li>
+			<li>JSON is lightweight data interchange format</li>
+			<li>JSON is language independent *</li>
+			<li>JSON is "self-describing" and easy to understand</li>
+			<li>The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. 
+		        Code for reading and generating JSON data can be written in any programming language.</li>
+		</ul>
+		<p>This JSON syntax defines an employees object: an array of 3 employee records (objects):</p>
+		<h1>The JSON Format Evaluates to JavaScript Objects</h1>
+		<p>The JSON format is syntactically identical to the code for creating JavaScript objects.</p>
+		<p>Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.</p>
+		<h1>JSON Syntax Rules</h1>
+		<ul>
+			<li>Data is in name/value pairs</li>
+			<li>Data is separated by commas</li>
+			<li>Curly braces hold objects</li>
+			<li>Square brackets hold arrays</li>
+		</ul>
+		<h1>JSON Data - A Name and a Value</h1>
+		<p>JSON data is written as name/value pairs, just like JavaScript object properties.</p>
+		<p>A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:</p>
+		<pre>"firstName":"John"</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - JSON names require double quotes. JavaScript names don't.</h2>
+		<h1>JSON Objects</h1>
+		<p>JSON objects are written inside curly braces.</p>
+		<p>Just like in JavaScript, objects can contain multiple name/value pairs:</p>
+		<pre>{"firstName":"John", "lastName":"Doe"} </pre>
+		<h1>JSON Arrays</h1>
+		<p>JSON arrays are written inside square brackets.</p>
+		<p>Just like in JavaScript, an array can contain objects:</p>
+		<pre>"employees":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+]		
+		</pre>
+		<p>In the example above, the object "employees" is an array. It contains three objects.</p>
+		<p>Each object is a record of a person (with a first name and a last name).</p>
+		<h1>Converting a JSON Text to a JavaScript Object</h1>
+		<p>A common use of JSON is to read data from a web server, and display the data in a web page.</p>
+		<p>For simplicity, this can be demonstrated using a string as input (or read more in our JSON tutorial):</p>
+		<p>First, create a JavaScript string containing JSON syntax:</p>
+		<pre>var text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+		</pre>
+		<p>Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:</p>
+		<pre>var obj = JSON.parse(text);</pre>
+		<p>Finally, use the new JavaScript object in your page:</p>
+		<button onclick="jsonObjects()" class="btn btn-info btn-lg">JSON Objects</button>
+		<p id="jsonObjects"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM Navigation</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>With the HTML DOM, you can navigate the node tree using node relationships.</p>
+		<h1>DOM Nodes</h1>
+		<p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
+		<ul>
+			<li>The entire document is a document node</li>
+			<li>Every HTML element is an element node</li>
+			<li>The text inside HTML elements are text nodes</li>
+			<li>Every HTML attribute is an attribute node</li>
+			<li>All comments are comment nodes</li>
+		</ul>
+		<img src="HTML Tree.gif" alt="HTML Tree" height="auto" width="auto" />
+		<p>With the HTML DOM, all nodes in the node tree can be accessed by JavaScript.</p>
+		<p>New nodes can be created, and all nodes can be modified or deleted.</p>
+		<h1>Node Relationships</h1>
+		<p>The nodes in the node tree have a hierarchical relationship to each other.</p>
+		<p>The terms parent, child, and sibling are used to describe the relationships.</p>
+		<ul>
+			<li>In a node tree, the top node is called the root (or root node)</li>
+			<li>Every node has exactly one parent, except the root (which has no parent)</li>
+			<li>A node can have a number of children</li>
+			<li>Siblings (brothers or sisters) are nodes with the same parent</li>
+		</ul>
+		<img src="Navigation Tree.gif" alt="Navigation Tree" height="auto" width="auto" />
+		<p>From the HTML above you can read:</p>
+		<ul>
+			<li>html is the root node</li>
+			<li>html has no parents </li>
+			<li>html is the parent of head and <body></li>
+			<li>head is the first child of html</li>
+			<li>body is the last child of html</li>
+		</ul>
+		<p><b>and:</b></p>
+		<ul>
+			<li>head has one child: title</li>
+			<li>title has one child (a text node): "DOM Tutorial"</li>
+			<li>body has two children: h1 and p</li>
+			<li>h1 has one child: "DOM Lesson one"</li>
+			<li>p has one child: "Hello world!"</li>
+			<li>h1 and p are siblings</li>
+		</ul>
+		<h1>Navigating Between Nodes</h1>
+		<p>You can use the following node properties to navigate between nodes with JavaScript:</p>
+		<ul>
+			<li>parentNode</li>
+			<li>childNodes[nodenumber]</li>
+			<li>firstChild</li>
+			<li>lastChild</li>
+			<li>nextSibling</li>
+			<li>previousSibling</li>
+		</ul>
+		<h1>Warning !</h1>
+		<p>A common error in DOM processing is to expect an element node to contain text. </p>
+		<p>In this example: DOM Tutorial, the element node does not contain text. It contains a text node with the value "DOM Tutorial". </p>
+		<p>The value of the text node can be accessed by the node's innerHTML property, or the nodeValue.</p>
+		<h1>Child Nodes and Node Values</h1>
+		<p>In addition to the innerHTML property, you can also use the childNodes and nodeValue properties to get the content of an element.</p>
+		<p>The following example collects the node value of an h1 element and copies it into a p element:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="collectionOfNodes()">Collection Of Nodes</button>
+		<h1 id="collectionOfNodesHeading">My First Page</h1>
+		<p id="collectionOfNodesParagraph">Hello World!</p>
+		<p>In the example above, getElementById is a method, while childNodes and nodeValue are properties.</p>
+		<p>In this tutorial we use the innerHTML property. However, learning the method above is useful for understanding the tree structure and the navigation of the DOM.</p>
+		<p>Using the firstChild property is the same as using childNodes[0]:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="collectionOfNodesUsingFirstChild()">Collection Of Nodes Using First Child</button>
+		<h1 id="collectionOfNodesUsingFirstChildHeading">My First Page</h1>
+		<p id="collectionOfNodesUsingFirstChildParagraph">Hello World!</p>
+		<h1>DOM Root Nodes</h1>
+		<p>There are two special properties that allow access to the full document:</p>
+		<ul>
+			<li>document.body - The body of the document</li>
+			<li>document.documentElement - The full document</li>
+		</ul>
+		<button type="button" class="btn btn-success btn-lg" onclick="DOMRootNodes1()">Document.Body Node</button>
+		<button type="button" class="btn btn-success btn-lg" onclick="DOMRootNodes2()">Document.Document Node</button>
+		<h1>The nodeName Property</h1>
+		<p>The nodeName property specifies the name of a node.</p>
+		<ul>
+			<li>nodeName is read-only</li>
+			<li>nodeName of an element node is the same as the tag name</li>
+			<li>nodeName of an attribute node is the attribute name</li>
+			<li>nodeName of a text node is always #text</li>
+			<li>nodeName of the document node is always #document</li>
+		</ul>
+		<p style="background-color:lightyellow">Note: nodeName always contains the uppercase tag name of an HTML element.</p>
+		<h1>The nodeValue Property</h1>
+		<p>The nodeValue property specifies the value of a node.</p>
+		<ul>
+			<li>nodeValue for element nodes is undefined</li>
+			<li>nodeValue for text nodes is the text itself</li>
+			<li>nodeValue for attribute nodes is the attribute value</li>
+		</ul>
+		<h1>The nodeType Property</h1>
+		<p>The nodeType property returns the type of node. nodeType is read only.</p>
+		<p>The most important node types are:</p>
+		<img src="Node Types.png" alt="Node Types" height="auto" width="auto" />
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

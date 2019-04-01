@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Browser BOM</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Window - The Browser Object Model</h1>
+		<p>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.</p>
+		<h1>The Browser Object Model (BOM)</h1>
+		<p>There are no official standards for the <b>B</b>rowser <b>O<</b>bject <b>M</b>odel (BOM).</p>
+		<p>Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.</p>
+		<h1>The Window Object</h1>
+		<p>The <b>window</b> object is supported by all browsers. It represents the browser's window.</p>
+		<p>All global JavaScript objects, functions, and variables automatically become members of the window object.</p>
+		<p>Global variables are properties of the window object.</p>
+		<p>Global functions are methods of the window object.</p>
+		<p>Even the document object (of the HTML DOM) is a property of the window object: </p>
+		<pre>	
+		window.document.getElementById("header"); 
+		</pre>
+		<p>is the same as:</p>
+		<pre>	
+		document.getElementById("header"); 
+		</pre>
+		<h1>Window Size</h1>
+		<p>Two properties can be used to determine the size of the browser window.</p>
+		<p>Both properties return the sizes in pixels:</p>
+		<ul>
+			<li>window.innerHeight - the inner height of the browser window (in pixels)</li>
+			<li>window.innerWidth - the inner width of the browser window (in pixels)</li>
+		</ul>
+		<p style="background-color:lightyellow">The browser window (the browser viewport) is NOT including toolbars and scrollbars.</p>
+		<p>For Internet Explorer 8, 7, 6, 5:</p>
+		<ul>
+			<li>document.documentElement.clientHeight</li>
+			<li>document.documentElement.clientWidth</li>
+			<li>or</li>
+			<li>document.body.clientHeight</li>
+			<li>document.body.clientWidth</li>
+		</ul>
+		<p>A practical JavaScript solution (covering all browsers): </p>
+		<button type="button" class="btn btn-success btn-lg" onclick="windowSize()">Window Size</button>
+		<p id="windowSize"></p>
+		<p> The example displays the browser window's height and width: (NOT including toolbars/scrollbars)</p>
+		<h1>Other Window Methods</h1>
+		<p>Some other methods:</p>
+		<ul>
+			<li>window.open() - open a new window</li>
+			<li>window.close() - close the current window</li>
+			<li>window.moveTo() -move the current window</li>
+			<li>window.resizeTo() -resize the current window</li>
+		</ul>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

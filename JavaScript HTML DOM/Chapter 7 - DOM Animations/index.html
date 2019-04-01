@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM Animations</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	#container 
+	{
+		width: 400px;
+		height: 400px;
+		position: relative;
+		background: yellow;
+	}
+	#animate 
+	{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: red;
+	}
+	</style>
+	</head>
+		<body>
+		<p>Learn to create HTML animations using JavaScript.</p>
+		<h1>A Basic Web Page</h1>
+		<p>To demonstrate how to create HTML animations with JavaScript, we will use a simple web page:</p>
+		<h1>Create an Animation Container</h1>
+		<p>All animations should be relative to a container element.</p>
+		<h1>Style the Elements</h1>
+		<p>The container element should be created with style = "position: relative".</p>
+		<p>The animation element should be created with style = "position: absolute".</p>
+		<h1>Animation Code</h1>
+		<p>JavaScript animations are done by programming gradual changes in an element's style.</p>
+		<p>The changes are called by a timer. When the timer interval is small, the animation looks continuous.</p>
+		<p>The basic code is:</p>
+		<pre>
+		var id = setInterval(frame, 5);
+
+function frame() {
+    if (/* test for finished */) {
+        clearInterval(id);
+    } else {
+        /* code to change the element style */ 
+    }
+} 
+		</pre>
+		<h1>Create the Animation Using JavaScript</h1>
+		<button type="button" class="btn btn-success btn-lg" onclick="animationUsingJavaScript()">Animation Using JavaScript</button><br /><br />
+		<div id ="container">
+			<div id ="animate"></div>
+		</div>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

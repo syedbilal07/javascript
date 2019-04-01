@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>String Methods</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>String Length</h1>
+		<p>The length property returns the length of a string:</p>
+		<p id="demo"></p>
+		<h1>Finding a String in a String</h1>
+		<p>The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:</p>
+		<p id="p1">Please locate where 'locate' occurs!.</p>
+		<button onclick="indexOfFunction()" class="btn btn-lg btn-success">Try it</button>
+		<p id="demo1"></p>
+		<p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+		<p id="p2">Please locate where 'locate' occurs!.</p>
+		<button onclick="lastindexOfFunction()" class="btn btn-lg btn-success">Try it</button>
+		<p id="demo2"></p>
+		<h1>Searching for a String in a String</h1>
+		<p>The search() method searches a string for a specified value and returns the position of the match:</p>
+		<p id="p3">Please locate where 'locate' occurs!.</p>
+		<button onclick="searchFunction()" class="btn btn-lg btn-success">Try it</button>
+		<p id="demo3"></p>
+		<h1><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />Did You Notice.?</h1>
+		<p>The two methods, indexOf() and search(), are equal.</p>
+		<p>They accept the same arguments (parameters), and they return the same value.</p>
+		<p>The two methods are equal, but the search() method can take much more powerful search values.</p>
+		<p>You will learn more about powerful search values in the chapter about regular expressions.</p>
+		<h1>Extracting String Parts</h1>
+		<p>There are 3 methods for extracting a part of a string:</p>
+		<p>slice(start, end)</p>
+		<p>substring(start, end)</p>
+		<p>substr(start, length)</p>
+		<h1>The slice() Method</h1>
+		<p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+		<p>The method takes 2 parameters: the starting index (position), and the ending index (position).</p>
+		<p>This example slices out a portion of a string from position 7 to position 13: </p>
+		<p id="demo4"></p>
+		<p>If a parameter is negative, the position is counted from the end of the string.</p>
+		<p>This example slices out a portion of a string from position -12 to position -6: </p>
+		<p id="demo5"></p>
+		<h1>The substring() Method</h1>
+		<p>substring() is similar to slice().</p>
+		<p>The difference is that substring() cannot accept negative indexes.</p>
+		<p id="demo6"></p>
+		<h1>The substr() Method</h1>
+		<p>substr() is similar to slice().</p>
+		<p>The difference is that the second parameter specifies the length of the extracted part.</p>
+		<p>If the first parameter is negative, the position counts from the end of the string.</p>
+		<p>The second parameter can not be negative, because it defines the length.</p>
+		<p>If you omit the second parameter, substr() will slice out the rest of the string.</p>
+		<p id="demo7"></p>
+		<h1>Replacing String Content</h1>
+		<p>The replace() method replaces a specified value with another value in a string:</p>
+		<p>The replace() method can also take a regular expression as the search value.</p>
+		<p>By default, the replace() function replaces only the first match. To replace all matches, use a regular expression with a g flag (for global match):</p>
+		<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+		<button onclick="replace()" class="btn btn-lg btn-success">Replace It</button>
+		<p id="demo8">Please visit Microsoft!</p>
+		<p>The replace() method can also take a regular expression as the search value.</p>
+		<p>By default, the replace() function replaces only the first match. To replace all matches, use a regular expression with a g flag (for global match):</p>
+		<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+		<button onclick="replaceAll()" class="btn btn-lg btn-success">Replace It</button>
+		<p id="demo9">Please visit Microsoft and Microsoft!</p>
+		<p>The replace() method does not change the string it is called on. It returns a new string.</p>
+		<h1>Converting to Upper and Lower Case</h1>
+		<p>A string is converted to upper case with toUpperCase():</p>
+		<button onclick="uppercase()" class="btn btn-lg btn-success">Uppercase It</button>
+		<p id="demo10">hello world.!</p>
+		<p>A string is converted to lower case with toLowerCase():</p>
+		<button onclick="lowercase()" class="btn btn-lg btn-success">Lowercase It</button>
+		<p id="demo11">HELLO WORLD.!</p>
+		<h1>The concat() Method</h1>
+		<p>concat() joins two or more strings:</p>
+		<p id="demo12"></p>
+		<h1>Extracting String Characters</h1>
+		<p>There are 2 safe methods for extracting string characters:</p>
+		<p>charAt(position)</p>
+		<p>charCodeAt(position)</p>
+		<h1>The charAt() Method</h1>
+		<p>The charAt() method returns the character at a specified index (position) in a string:</p>
+		<p id="demo13"></p>
+		<h1>The charCodeAt() Method</h1>
+		<p>The charCodeAt() method returns the unicode of the character at a specified index in a string:</p>
+		<p id="demo14"></p>
+		<h1>Accessing a String as an Array is Unsafe</h1>
+		<p>You might have seen code like this, accessing a string as an array:</p>
+		<p>This is unsafe and unpredictable: </p>
+		<p>It does not work in all browsers (not in IE5, IE6, IE7)</p>
+		<p>It makes strings look like arrays (but they are not)</p>
+		<p>str[0] = "H" does not give an error (but does not work) </p>
+		<p>If you want to read a string as an array, convert it to an array first.</p>
+		<h1>Converting a String to an Array</h1>
+		<p>A string can be converted to an array with the split() method:</p>
+		<button onclick="split()" class="btn btn-lg btn-success">Convert String To Array!</button>
+		<p id="demo15"></p>
+		<p>If the separator is omitted, the returned array will contain the whole string in index [0].</p>
+		<p>If the separator is "", the returned array will be an array of single characters:</p>
+		<p id="demo16"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>

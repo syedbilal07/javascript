@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Conditions</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript If...Else Statements</h1>
+		<p>Conditional statements are used to perform different actions based on different conditions.</p>
+		<h1>Conditional Statements</h1>
+		<p>Very often when you write code, you want to perform different actions for different decisions.</p>
+		<p>You can use conditional statements in your code to do this.</p>
+		<p>In JavaScript we have the following conditional statements:</p>
+		<ul>
+			<li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+			<li>Use else to specify a block of code to be executed, if the same condition is false</li>
+			<li>Use else if to specify a new condition to test, if the first condition is false</li>
+			<li>Use switch to specify many alternative blocks of code to be executed</li>
+		</ul>
+		<h1>The if Statement</h1>
+		<p>Use the if statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+		<h4>Syntax</h4>
+		<pre>if (condition) {
+    block of code to be executed if the condition is true
+} 
+		</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Note that if is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.</h2>
+		<p>Make a "Good day" greeting if the hour is less than 18:00:</p>
+		<button onclick="ifStatement()" class="btn btn-info btn-lg">IF Statement</button>
+		<p id="ifStatement"></p>
+		<h1>The else Statement</h1>
+		<p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+		<h4>Syntax</h4>
+		<pre>if (condition) {
+    block of code to be executed if the condition is true
+} else {
+    block of code to be executed if the condition is false
+}
+		</pre>
+		<p>If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":</p>
+		<button onclick="elseStatement()" class="btn btn-info btn-lg">ELSE Statement</button>
+		<p id="elseStatement"></p>
+		<h1>The else if Statement</h1>
+		<p>Use the else if statement to specify a new condition if the first condition is false.</p>
+		<h4>Syntax</h4>
+		<pre>if (condition1) {
+    block of code to be executed if condition1 is true
+} else if (condition2) {
+    block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    block of code to be executed if the condition1 is false and condition2 is false
+}
+		</pre>
+		<button onclick="elseIfStatement()" class="btn btn-info btn-lg">ELSE IF Statement</button>
+		<p id="elseIfStatement"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

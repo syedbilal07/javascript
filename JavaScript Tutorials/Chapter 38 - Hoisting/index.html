@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Hoisting</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Hoisting</h1>
+		<p>Hoisting is JavaScript's default behavior of moving declarations to the top.</p>
+		<h1>JavaScript Declarations are Hoisted</h1>
+		<p>In JavaScript, a variable can be declared after it has been used.</p>
+		<p>In other words; a variable can be used before it has been declared.</p>
+		<p>Example 1 gives the same result as Example 2:</p>
+		<button onclick="hoistingMethod()" class="btn btn-success btn-lg">Hoisting Method</button>
+		<p id="hoistingMethod"></p>
+		<button onclick="hoistingMethod1()" class="btn btn-success btn-lg">Hoisting Method</button>
+		<p id="hoistingMethod1"></p>
+		<p>To understand this, you have to understand the term "hoisting".</p>
+		<p>Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope
+		(to the top of the current script or the current function).</p>
+		<h1>JavaScript Initializations are Not Hoisted</h1>
+		<p>JavaScript only hoists declarations, not initializations.</p>
+		<p>Example 1 does not give the same result as Example 2:</p>
+		<button onclick="noHoistingMethod()" class="btn btn-success btn-lg">No Hoisting Method</button>
+		<p id="noHoistingMethod"></p>
+		<button onclick="noHoistingMethod1()" class="btn btn-success btn-lg">No Hoisting Method</button>
+		<p id="noHoistingMethod1"></p>
+		<p>Does it make sense that y is undefined in the last example?</p>
+		<p>This is because only the declaration (var y), not the initialization (=7) is hoisted to the top.</p>
+		<p>Because of hoisting, y has been declared before it is used, but because initializations are not hoisted, the value of y is undefined.</p>
+		<p>Example 2 is the same as writing:</p>
+		<button onclick="hoistingMethod2()" class="btn btn-success btn-lg">Hoisting Method</button>
+		<p id="hoistingMethod2"></p>
+		<h1>Declare Your Variables At the Top !</h1>
+		<p>Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.</p>
+		<p>If a developer doesn't understand hoisting, programs may contain bugs (errors).</p>
+		<p>To avoid bugs, always declare all variables at the beginning of every scope.</p>
+		<p>Since this is how JavaScript interprets the code, it is always a good rule. </p>
+		<h4><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - JavaScript in strict mode does not allow variables to be used if they are not declared.</h4>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

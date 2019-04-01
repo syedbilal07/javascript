@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM Events</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>HTML DOM allows JavaScript to react to HTML events:</p>
+		<h1>Reacting to Events</h1>
+		<p>A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.</p>
+		<p>To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:</p>
+		<pre>onclick=JavaScript </pre>
+		<p>Examples of HTML events:</p>
+		<ul>
+			<li>When a user clicks the mouse</li>
+			<li>When a web page has loaded</li>
+			<li>When an image has been loaded</li>
+			<li>When the mouse moves over an element</li>
+			<li>When an input field is changed</li>
+			<li>When an HTML form is submitted</li>
+			<li>When a user strokes a key </li>
+		</ul>
+		<p>In this example, the content of the h1 element is changed when a user clicks on it:</p>
+		<h1 onclick="this.innerHTML = 'Ooops!' ">Hello World.!</h1>
+		<p>In this example, a function is called from the event handler:</p>
+		<h1 onclick="onClickEventUsingEventHandler(this)">Click on this text!</h1>
+		<h1>HTML Event Attributes</h1>
+		<p>To assign events to HTML elements you can use event attributes.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="eventAttribute()">Event Attribute</button>
+		<p id="eventAttribute"></p>
+		<p>In the example above, a function named <i>displayDate</i> will be executed when the button is clicked.</p>
+		<h1>Assign Events Using the HTML DOM</h1>
+		<p>The HTML DOM allows you to assign events to HTML elements using JavaScript: </p>
+		<button type="button" id ="myBtn" class="btn btn-success btn-lg" onclick="eventsUsingDOM()">Events Using DOM</button>
+		<p id="eventsUsingDOM"></p>
+		<p>In the example above, a function named <i>displayDate</i> is assigned to an HTML element with the id="myBtn".</p>
+		<p>The function will be executed when the button is clicked.</p>
+		<h1>The onload and onunload Events</h1>
+		<p>The onload and onunload events are triggered when the user enters or leaves the page.</p>
+		<p>The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.</p>
+		<p>The onload and onunload events can be used to deal with cookies.</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="onLoadEvent()">OnLoad Event</button>
+		<p id="onLoadEvent"></p>
+		<h1>The onchange Event</h1>
+		<p>The onchange event is often used in combination with validation of input fields.</p>
+		<p>Below is an example of how to use the onchange. The upperCase() function will be called when a user changes the content of an input field.</p>
+		<label class="control-label">Enter Your Name : - 
+			<input id="onChangeEvent" class="form-control" onchange="onChangeEvent()" />
+		</label>
+		<h1>The onmouseover and onmouseout Events</h1>
+		<p>The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element:</p>
+		<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:150px;height:150px;padding:40px;">
+			<p style="color:green;font-size:20px;">Mouse Over Me</p>
+		</div>
+		<h1>The onmousedown, onmouseup and onclick Events</h1>
+		<p>The onmousedown, onmouseup, and onclick events are all parts of a mouse-click. First when a mouse-button is clicked,
+		the onmousedown event is triggered, then, when the mouse-button is released, the onmouseup event is triggered, finally,
+		when the mouse-click is completed, the onclick event is triggered.</p>
+		<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:150px;height:150px;padding:40px;">
+			<p style="color:green;font-size:20px;">Mouse Over Me</p>
+		</div>
+		<h1>More Examples</h1>
+		<ul>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmousedown">onmousedown and onmouseup</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onload">onload</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onfocus">onfocus</a></li>
+			<li><a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmouse">Mouse Events</a></li>
+		</ul>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

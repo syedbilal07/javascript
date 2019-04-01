@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM HTML</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript HTML DOM - Changing HTML</h1>
+		<p>The HTML DOM allows JavaScript to change the content of HTML elements.</p>
+		<h1>Changing the HTML Output Stream</h1>
+		<p>JavaScript can create dynamic HTML content:</p>
+		<p><b>Date: Sun Jul 24 2016 21:18:13 GMT+0500 (Pakistan Standard Time)</b></p>
+		<p>In JavaScript, document.write() can be used to write directly to the HTML output stream:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="documentWrite()">Document.Write</button>
+		<p id="documentWrite"></p>
+		<p style="background-color:lightyellow">Never use document.write() after the document is loaded. It will overwrite the document.</p>
+		<h1>Changing HTML Content</h1>
+		<p>The easiest way to modify the content of an HTML element is by using the innerHTML property.</p>
+		<p>To change the content of an HTML element, use this syntax:</p>
+		<pre>document.getElementById(id).innerHTML = new HTML</pre>
+		<p>This example changes the content of a p element:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="getElementByIdMethod1()">GET Element By ID</button>
+		<p id="getElementByIdMethod1">Hello World.!</p>
+		<p>This example changes the content of an h1 element:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="getElementByIdMethod2()">GET Element By ID</button>
+		<h1 id="getElementByIdMethod2">Old Header.!</h1>
+		<p>Example explained:</p>
+		<ul>
+			<li>The HTML document above contains an h1 element with id="header"</li>
+			<li>We use the HTML DOM to get the element with id="header"</li>
+			<li>A JavaScript changes the content (innerHTML) of that element</li>
+		</ul>
+		<h1>Changing the Value of an Attribute</h1>
+		<p>To change the value of an HTML attribute, use this syntax: </p>
+		<pre>document.getElementById(id).attribute=new value</pre>
+		<p>This example changes the value of the src attribute of an img element:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="changeAttribute()">Change Attribute</button><br /><br />
+		<img src="Javascript Logo.png" id ="myImage" alt="Javascript Logo" height="200px" width="200px" />
+		<p>Example explained:</p>
+		<ul>
+			<li>The HTML document above contains an img element with id="myImage"</li>
+			<li>We use the HTML DOM to get the element with id="myImage"</li>
+			<li>A JavaScript changes the src attribute of that element from "smiley.gif" to "landscape.jpg"</li>
+		</ul>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

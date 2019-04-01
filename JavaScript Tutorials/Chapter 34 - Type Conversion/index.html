@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Type Conversions</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Type Conversion</h1>
+		<p>Number() converts to a Number, String() converts to a String, Boolean() converts to a Boolean. </p>
+		<h1>JavaScript Data Types</h1>
+		<p>In JavaScript there are 5 different data types that can contain values:</p>
+		<ul>
+			<li>string</li>
+			<li>number</li>
+			<li>boolean</li>
+			<li>object</li>
+			<li>function</li>
+		</ul>
+		<p>There are 3 types of objects:</p>
+		<ul>
+			<li>Object</li>
+			<li>Date</li>
+			<li>Array</li>
+		</ul>
+		<p>And 2 data types that cannot contain values:</p>
+		<ul>
+			<li>null</li>
+			<li>undefined</li>
+		</ul>
+		<h1>The typeof Operator</h1>
+		<p>You can use the typeof operator to find the data type of a JavaScript variable.</p>
+		<button onclick="typeOfOperator()" class="btn btn-success btn-lg">Type Of Operator</button>
+		<p id="typeOfOperator"></p>
+		<p>Please observe:</p>
+		<ul>
+			<li>The data type of NaN is number</li>
+			<li>The data type of an array is object</li>
+			<li>The data type of a date is object</li>
+			<li>The data type of null is object</li>
+			<li>The data type of an undefined variable is undefined</li>
+		</ul>
+		<p><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />You cannot use typeof to determine if a JavaScript object is an array (or a date). </p>
+		<h1>The Data Type of typeof</h1>
+		<p>The typeof operator is not a variable. It is an operator. Operators ( + - * / ) do not have any data type. </p>
+		<p>But, the typeof operator always returns a string containing the type of the operand.</p>
+		<h1>The constructor Property</h1>
+		<p>The constructor property returns the constructor function for all JavaScript variables.</p>
+		<button onclick="constructorProperty()" class="btn btn-success btn-lg">Constructor Property</button>
+		<p id="constructorProperty"></p>
+		<p> You can check the constructor property to find out if an object is an Array (contains the word "Array"):</p>
+		<button onclick="isArray()" class="btn btn-success btn-lg">Constructor Property For Array</button>
+		<p id="isArray"></p>
+		<p> You can check the constructor property to find out if an object is a Date (contains the word "Date"):</p>
+		<button onclick="isDate()" class="btn btn-success btn-lg">Constructor Property For Object</button>
+		<p id="isDate"></p>
+		<h1>JavaScript Type Conversion</h1>
+		<p>JavaScript variables can be converted to a new variable and another data type:</p>
+		<ul>
+			<li>By the use of a JavaScript function</li>
+			<li>Automatically by JavaScript itself</li>
+		</ul>
+		<h1>Converting Numbers to Strings</h1>
+		<p>The global method String() can convert numbers to strings.</p>
+		<p>It can be used on any type of numbers, literals, variables, or expressions:</p>
+		<button onclick="stringMethod()" class="btn btn-success btn-lg">Convert Numbers To String</button>
+		<p id="stringMethod"></p>
+		<p>The Number method toString() does the same.</p>
+		<button onclick="toStringMethod()" class="btn btn-success btn-lg">Convert Numbers To String</button>
+		<p id="toStringMethod"></p>
+		<h1>Converting Booleans to Strings</h1>
+		<p>The global method String() can convert booleans to strings.</p>
+		<p>String(false)        // returns "false"<br />
+		   String(true)         // returns "true" 
+		</p>
+		<p>The Boolean method toString() does the same.</p>
+		<p>
+			false.toString()     // returns "false"<br />
+			true.toString()      // returns "true"
+		</p>
+		<h1>Converting Dates to Strings</h1>
+		<p>The global method String() can convert dates to strings.</p>
+		<p>String(Date())      // returns Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)</p>
+		<p>The Date method toString() does the same.</p>
+		<p>Date().toString()   // returns Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)</p>
+		<h1>Converting Strings to Numbers</h1>
+		<p>The global method Number() can convert strings to numbers.</p>
+		<p>Strings containing numbers (like "3.14") convert to numbers (like 3.14).</p>
+		<p>Empty strings convert to 0.</p>
+		<p>Anything else converts to NaN (Not a number).</p>
+		<p>Number("3.14")    // returns 3.14<br />
+		   Number(" ")       // returns 0<br />
+           Number("")        // returns 0<br />
+           Number("99 88")   // returns NaN </p>
+		<h1>The Unary + Operator</h1>
+		<p>The unary + operator can be used to convert a variable to a number:</p>
+		<button onclick="unaryOperator()" class="btn btn-success btn-lg">Unary Operator</button>
+		<p id="unaryOperator"></p>
+		<p> If the variable cannot be converted, it will still become a number, but with the value NaN (Not a number):</p>
+		<button onclick="unaryOperatorNan()" class="btn btn-success btn-lg">Unary Operator (NaN)</button>
+		<p id="unaryOperatorNan"></p>
+		<h1>Converting Booleans to Numbers</h1>
+		<p>The global method Number() can also convert booleans to numbers.</p>
+		<p>Number(false)     // returns 0<br />
+           Number(true)      // returns 1 
+		</p>
+		<h1>Converting Dates to Numbers</h1>
+		<p>The global method Number() can be used to convert dates to numbers.</p>
+		<p>d = new Date();<br />
+           Number(d)          // returns 1404568027739 
+		</p>
+		<p>The date method getTime() does the same.</p>
+		<p>d = new Date();<br />
+           d.getTime()        // returns 1404568027739 
+		</p>
+		<h1>Automatic Type Conversion</h1>
+		<p>When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.</p>
+		<p>The result is not always what you expect:</p>
+		<button onclick="automaticType()" class="btn btn-success btn-lg">Automatic Type Conversion</button>
+		<p id="automaticType"></p>
+		<h1>Automatic String Conversion</h1>
+		<p>JavaScript automatically calls the variable's toString() function when you try to "output" an object or a variable:</p>
+		<p>document.getElementById("demo").innerHTML = myVar;<br />
+           // if myVar = {name:"Fjohn"}  // toString converts to "[object Object]"<br />
+           // if myVar = [1,2,3,4]       // toString converts to "1,2,3,4"<br />
+           // if myVar = new Date()      // toString converts to "Fri Jul 18 2014 09:08:55 GMT+0200"
+		</p>
+		<p>Numbers and booleans are also converted, but this is not very visible:</p>
+		<p>// if myVar = 123             // toString converts to "123"<br />
+           // if myVar = true            // toString converts to "true"<br />
+           // if myVar = false           // toString converts to "false" 
+		</p>
+		<h1>JavaScript Type Conversion Table</h1>
+		<p>This table shows the result of converting different JavaScript values to Number, String, and Boolean:</p>
+		<img src="Type Conversion Table.png" alt="Type Conversion Table" height="auto" width="auto" />
+		
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

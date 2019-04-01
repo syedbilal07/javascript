@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Comparisons</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Comparison and Logical Operators</h1>
+		<p>Comparison and Logical operators are used to test for true or false.</p>
+		<h1>Comparison Operators</h1>
+		<p>Comparison operators are used in logical statements to determine equality or difference between variables or values. </p>
+		<p>Given that x = 5, the table below explains the comparison operators:</p>
+		<img src="comparison.png" alt="comparison" height="auto" width="auto" />
+		<h1>How Can it be Used</h1>
+		<p>Comparison operators can be used in conditional statements to compare values and take action depending on the result:</p>
+		<p>if (age < 18) text = "Too young"; </p>
+		<h1>Logical Operators</h1>
+		<p>Logical operators are used to determine the logic between variables or values.</p>
+		<p>Given that x = 6 and y = 3, the table below explains the logical operators: </p>
+		<img src="logical.png" alt="logical" height="auto" width="auto" />
+		<h1>Conditional (Ternary) Operator</h1>
+		<p>JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.</p>
+		<p> variablename = (condition) ? value1:value2</p>
+		<input type="text" class="form-control" id="age" placeholder="Enter Your Age"></input><br />
+		<button onclick="conditional()" class="btn btn-success btn-lg">Conditional Operator</button>
+		<p id="conditional"></p>
+		<p>If the variable age is a value below 18, the value of the variable voteable will be "Too young", otherwise the value of voteable will be "Old enough".</p>
+		<h1>Comparing Different Types</h1>
+		<p>Comparing data of different types may give unexpected results.</p>
+		<p>When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison.
+		An empty string converts to 0. A non-numeric string converts to NaN which is always false.</p>
+		<img src="comparing-types.png" alt="comparing types" height="auto" width="auto" />
+		<p>When comparing two strings, "2" will be greater than "12", because (alphabetically) 1 is less than 2.</p>
+		<p>To secure a proper result, variables should be converted to the proper type before comparison:</p>
+		<input type="text" class="form-control" id="age1" placeholder="Enter Your Age"></input><br />
+		<button onclick="comparingTypes()" class="btn btn-success btn-lg">Comparing Types</button>
+		<p id="comparingTypes"></p>
+		<h1>JavaScript Bitwise Operators</h1>
+		<p>Bit operators work on 32-bit numbers.</p>
+		<p>Any numeric operand in the operation is converted into a 32-bit number.</p>
+		<p>The result is converted back to a JavaScript number.</p>
+		<img src="bitwise.png" alt="bitwise" height="auto" width="auto" /><br /><br />
+		<button onclick="bitwise1()" class="btn btn-success btn-lg">Bitwise Operator</button>
+		<p id="bitwise1"></p>
+		<button onclick="bitwise2()" class="btn btn-success btn-lg">Bitwise Operator</button>
+		<p id="bitwise2"></p>
+		<button onclick="bitwise3()" class="btn btn-success btn-lg">Bitwise Operator</button>
+		<p id="bitwise3"></p>
+		<button onclick="bitwise4()" class="btn btn-success btn-lg">Bitwise Operator</button>
+		<p id="bitwise4"></p>
+		<button onclick="bitwise5()" class="btn btn-success btn-lg">Bitwise Operator</button>
+		<p id="bitwise5"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

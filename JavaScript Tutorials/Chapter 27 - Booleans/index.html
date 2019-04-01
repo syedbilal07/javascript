@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Booleans</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Booleans</h1>
+		<p>A JavaScript Boolean represents one of two values: true or false.</p>
+		<h1>Boolean Values</h1>
+		<p>Very often, in programming, you will need a data type that can only have one of two values, like</p>
+		<ul>
+			<li>YES / NO</li>
+			<li>ON / OFF</li>
+			<li>TRUE / FALSE</li>
+		</ul>
+		<p>For this, JavaScript has a Boolean data type. It can only take the values true or false.</p>
+		<h1>The Boolean() Function</h1>
+		<p>You can use the Boolean() function to find out if an expression (or a variable) is true:</p>
+		<button onclick="booleanFunction()" class="btn btn-lg btn-success">Boolean Function</button>
+		<p id="booleanFunction"></p>
+		<p>Or even easier:</p>
+		<h1>Comparisons and Conditions</h1>
+		<p>The chapter JS Comparisons gives a full overview of comparison operators.</p>
+		<p>The chapter JS Conditions gives a full overview of conditional statements.</p>
+		<h1>Everything With a "Real" Value is True</h1>
+		<button onclick="withrealValue()" class="btn btn-lg btn-success">Real Value</button>
+		<p id="withrealValue"></p>
+		<h1>Everything Without a "Real" is False</h1>
+		<button onclick="zeroValue()"class="btn btn-lg btn-success">Zero Value</button>
+		<p id="zeroValue"></p>
+		<button onclick="minusZeroValue()" class="btn btn-lg btn-success">Minus Zero Value</button>
+		<p id="minusZeroValue"></p>
+		<button onclick="emptyString()" class="btn btn-lg btn-success">Empty String</button>
+		<p id="emptyString"></p>
+		<button onclick="undefinedValue()" class="btn btn-lg btn-success">Undefined</button>
+		<p id="undefinedValue"></p>
+		<button onclick="nullValue()" class="btn btn-lg btn-success">Null Value</button>
+		<p id="nullValue"></p>
+		<button onclick="falseValue()" class="btn btn-lg btn-success">False Value</button>
+		<p id="falseValue"></p>
+		<button onclick="nan()" class="btn btn-lg btn-success">NaN Value</button>
+		<p id="nan"></p>
+		<h1>Boolean Properties and Methods</h1>
+		<p>Primitive values, like true and false, cannot have properties or methods (because they are not objects). </p>
+		<p>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values
+		   as objects when executing methods and properties.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

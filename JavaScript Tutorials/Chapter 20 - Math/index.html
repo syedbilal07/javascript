@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Math</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The Math object allows you to perform mathematical tasks on numbers.</p>
+		<h1>The Math Object</h1>
+		<p>The Math object allows you to perform mathematical tasks.</p>
+		<p>The Math object includes several mathematical methods.</p>
+		<p>One common use of the Math object is to create a random number:</p>
+		<button onclick="randomNumber()" class="btn btn-info btn-lg">Random Number</button>
+		<p id="randomNumber"></p>
+		<h3><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Math has no constructor. No methods have to create a Math object first.</h3>
+		<h1>Math.min() and Math.max()</h1>
+		<p>Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments:</p>
+		<button onclick="mathMin()" class="btn btn-info btn-lg">Math Minimum</button>
+		<p id="mathMin"></p>
+		<p>Math.max() can be used to find the highest value in a list of arguments</p>
+		<button onclick="mathMax()" class="btn btn-info btn-lg">Math Maximum</button>
+		<p id="mathMax"></p>
+		<h1>Math.random()</h1>
+		<p>Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive):</p>
+		<button onclick="mathRandom()" class="btn btn-info btn-lg">Math Random</button>
+		<p id="mathRandom"></p>
+		<h3><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Math.random() always returns a number lower than 1. </h3>
+		<h1>Math.round()</h1>
+		<p>Math.round() rounds a number to the nearest integer:</p>
+		<button onclick="mathRound()" class="btn btn-info btn-lg">Math Round</button>
+		<p id="mathRound"></p>
+		<h1>Math.ceil()</h1>
+		<p>Math.ceil() rounds a number up to the nearest integer:</p>
+		<button onclick="mathCeil()" class="btn btn-info btn-lg">Math Ceil</button>
+		<p id="mathCeil"></p>
+		<h1>Math.floor()</h1>
+		<p>Math.floor() rounds a number down to the nearest integer:</p>
+		<button onclick="mathFloor()" class="btn btn-info btn-lg">Math Floor</button>
+		<p id="mathFloor"></p>
+		<p>Math.floor() and Math.random() can be used together to return a random number between 0 and 10:</p>
+		<button onclick="mathFloorAndRandom()" class="btn btn-info btn-lg">Math Floor & Math Random</button>
+		<p id="mathFloorAndRandom"></p>
+		<h1>Math Constants</h1>
+		<p>JavaScript provides 8 mathematical constants that can be accessed with the Math object:</p>
+		<button onclick="mathConstant()" class="btn btn-info btn-lg">Math Constant</button>
+		<p id="mathConstant"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

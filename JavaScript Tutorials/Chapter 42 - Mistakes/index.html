@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Mistakes</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Common Mistakes</h1>
+		<p>This chapter points out some common JavaScript mistakes.</p>
+		<h1>Accidentally Using the Assignment Operator </h1>
+		<p>JavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (=),
+		   instead of a comparison operator (==) in an if statement.
+		</p>
+		<p>This if statement returns false (as expected) because x is not equal to 10:</p>
+		<button onclick="assignmentOperatorReturnsFalse()" class="btn btn-success btn-lg">Assignment Operator Returns False</button>
+		<p id="assignmentOperatorReturnsFalse"></p>
+		<p>This if statement returns true (maybe not as expected), because 10 is true:</p>
+		<button onclick="assignmentOperatorReturnsTrue()" class="btn btn-success btn-lg">Assignment Operator Returns True</button>
+		<p id="assignmentOperatorReturnsTrue"></p>
+		<p>This if statement returns false (maybe not as expected), because 0 is false:</p>
+		<button onclick="ifStatementReturnsFalse()" class="btn btn-success btn-lg">IF Statement Returns False</button>
+		<p id="ifStatementReturnsFalse"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - An assignment always returns the value of the assignment.</h2>
+		<h1>Expecting Loose Comparison</h1>
+		<p>In regular comparison, data type does not matter. This if statement returns true:</p>
+		<button onclick="inRegularComparisonDataTypeDoesNotMatter()" class="btn btn-success btn-lg">In Regular Comparison, Data Type Does Not Matter</button>
+		<p id="inRegularComparisonDataTypeDoesNotMatter"></p>
+		<p>In strict comparison, data type does matter. This if statement returns false:</p>
+		<button onclick="inStrictComparisonDataTypeDoesNotMatter()" class="btn btn-success btn-lg">In Strict Comparison, Data Type Does Not Matter</button>
+		<p id="inStrictComparisonDataTypeDoesNotMatter"></p>
+		<p>It is a common mistake to forget that switch statements use strict comparison:</p>
+		<p>This case switch will display an alert:</p>
+		<button onclick="caseSwitchWillDisplayAlertMessage()" class="btn btn-success btn-lg">Case Switch Will Display An Alert Message</button>
+		<p id="caseSwitchWillDisplayAlertMessage"></p>
+		<p>This case switch will not display an alert:</p>
+		<button onclick="caseSwitchWillNotDisplayAlertMessage()" class="btn btn-success btn-lg">Case Switch Will Not Display An Alert Message</button>
+		<p id="caseSwitchWillNotDisplayAlertMessage"></p>
+		<h1>Confusing Addition & Concatenation </h1>
+		<p>Addition is about adding numbers.</p>
+		<p>Concatenation is about adding strings.</p>
+		<p>In JavaScript both operations use the same + operator.</p>
+		<p>Because of this, adding a number as a number will produce a different result from adding a number as a string:</p>
+		<button onclick="addingANumberWillProduceADifferentResult()" class="btn btn-success btn-lg">Adding A Number Will Produce A Different Result</button>
+		<p id="addingANumberWillProduceADifferentResult"></p>
+		<p>When adding two variables, it can be difficult to anticipate the result:</p>
+		<button onclick="addingTwoVariables()" class="btn btn-success btn-lg">Adding Two Variables</button>
+		<p id="addingTwoVariables"></p>
+		<h1>Misunderstanding Floats</h1>
+		<p>All numbers in JavaScript are stored as 64-bits Floating point numbers (Floats).</p>
+		<p>All programming languages, including JavaScript, have difficulties with precise floating point values:</p>
+		<button onclick="floatTestWillFail()" class="btn btn-success btn-lg">Float Test Will Fail</button>
+		<p id="floatTestWillFail"></p>
+		<p>To solve the problem above, it helps to multiply and divide:</p>
+		<button onclick="floatTestSolution()" class="btn btn-success btn-lg">Float Test Solution</button>
+		<p id="floatTestSolution"></p>
+		<h1>Breaking a JavaScript String</h1>
+		<p>JavaScript will allow you to break a statement into two lines:</p>
+		<button onclick="breakingAString()" class="btn btn-success btn-lg">Breaking A String</button>
+		<p id="breakingAString"></p>
+		<p>But, breaking a statement in the middle of a string will not work:</p>
+		<button onclick="breakingAStringInTheMiddleWillNotWork()" class="btn btn-success btn-lg">Breaking A String In The Middle Will Not Work</button>
+		<p id="breakingAStringInTheMiddleWillNotWork"></p>
+		<p>You must use a "backslash" if you must break a statement in a string:</p>
+		<button onclick="breakingAStringUsingBackslash()" class="btn btn-success btn-lg">Breaking A String Using Backslash</button>
+		<p id="breakingAStringUsingBackslash"></p>
+		<h1>Misplacing Semicolon</h1>
+		<p>Because of a misplaced semicolon, this code block will execute regardless of the value of x:</p>
+		<button onclick="misplacedSemiColon()" class="btn btn-success btn-lg">Misplaced Semi Colon</button>
+		<p id="misplacedSemiColon"></p>
+		<h1>Breaking a Return Statement</h1>
+		<p>It is a default JavaScript behavior to close a statement automatically at the end of a line.</p>
+		<p>Because of this, these two examples will return the same result:</p>
+		<button onclick="breakingAReturnStatement1()" class="btn btn-success btn-lg">Breaking A Return Statement</button>
+		<p id="breakingAReturnStatement1"></p>
+		<button onclick="breakingAReturnStatement2()" class="btn btn-success btn-lg">Breaking A Return Statement</button>
+		<p id="breakingAReturnStatement2"></p>
+		<p>JavaScript will also allow you to break a statement into two lines.</p>
+		<p>Because of this, example 3 will also return the same result:</p>
+		<button onclick="breakingAReturnStatement3()" class="btn btn-success btn-lg">Breaking A Return Statement</button>
+		<p id="breakingAReturnStatement3"></p>
+		<p>But, what will happen if you break the return statement in two lines like this:</p>
+		<button onclick="breakingAReturnStatement4()" class="btn btn-success btn-lg">Breaking A Return Statement</button>
+		<p id="breakingAReturnStatement4"></p>
+		<p>The function will return undefined!</p>
+		<p>Why? Because JavaScript thinks you meant:</p>
+		<button onclick="breakingAReturnStatement5()" class="btn btn-success btn-lg">Breaking A Return Statement</button>
+		<p id="breakingAReturnStatement5"></p>
+		<h2>Explanation</h2>
+		<p>If a statement is incomplete like:</p>
+		<pre>var</pre>
+		<p> JavaScript will try to complete the statement by reading the next line:</p>
+		<pre>power = 10;</pre>
+		<p> But since this statement is complete: </p>
+		<pre>return</pre>
+		<p> JavaScript will automatically close it like this:</p>
+		<pre>return;</pre>
+		<p>This happens because closing (ending) statements with semicolon is optional in JavaScript.</p>
+		<p>JavaScript will close the return statement at the end of the line, because it is a complete statement.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  Never break a return statement.</h2>
+		<h1>Accessing Arrays with Named Indexes</h1>
+		<p>Many programming languages support arrays with named indexes.</p>
+		<p>Arrays with named indexes are called associative arrays (or hashes).</p>
+		<p>JavaScript does not support arrays with named indexes.</p>
+		<p>In JavaScript, arrays use numbered indexes:</p>
+		<button onclick="accessingArraysWithNamedIndex()" class="btn btn-success btn-lg">Accessing Arrays With Named Index</button>
+		<p id="accessingArraysWithNamedIndex"></p>
+		<p>In JavaScript, objects use named indexes.</p>
+		<p>If you use a named index, when accessing an array, JavaScript will redefine the array to a standard object.</p>
+		<p>After the automatic redefinition, array methods and properties will produce undefined or incorrect results:</p>
+		<button onclick="objectsAlsoUseNamedIndex()" class="btn btn-success btn-lg">Objects Also Use Named Index</button>
+		<p id="objectsAlsoUseNamedIndex"></p>
+		<h1>Ending an Array Definition with a Comma</h1>
+		<p>Incorrect</p>
+		<pre>points = [40, 100, 1, 5, 25, 10,];</pre>
+		<p>Some JSON and JavaScript engines will fail, or behave unexpectedly.</p>
+		<p>Correct</p>
+		<pre>points = [40, 100, 1, 5, 25, 10];</pre>
+		<h1>Ending an Object Definition with a Comma</h1>
+		<p>Incorrect</p>
+		<pre>person = {firstName:"John", lastName:"Doe", age:46,} </pre>
+		<p>Some JSON and JavaScript engines will fail, or behave unexpectedly.</p>
+		<p>Correct</p>
+		<pre>person = {firstName:"John", lastName:"Doe", age:46}</pre>
+		<h1>Undefined is Not Null</h1>
+		<p>With JavaScript, null is for objects, undefined is for variables, properties, and methods.</p>
+		<p>To be null, an object has to be defined, otherwise it will be undefined.</p>
+		<p>If you want to test if an object exists, this will throw an error if the object is undefined:</p>
+		<p>Incorrect</p>
+		<pre>if (myObj !== null && typeof myObj !== "undefined")</pre>
+		<p>Because of this, you must test typeof() first:</p>
+		<p>Correct></p>
+		<pre>if (typeof myObj !== "undefined" && myObj !== null)</pre>
+		<h1>Expecting Block Level Scope</h1>
+		<p>JavaScript does not create a new scope for each code block.</p>
+		<p>It is true in many programming languages, but not true in JavaScript.</p>
+		<p>It is a common mistake, among new JavaScript developers, to believe that this code returns undefined:</p>
+		<button onclick="expectingBlockLevelReturnsUndefined()" class="btn btn-success btn-lg">Expecting Block Level Scope Retuns Undefined</button>
+		<p id="expectingBlockLevelReturnsUndefined"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

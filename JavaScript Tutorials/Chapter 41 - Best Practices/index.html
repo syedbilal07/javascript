@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Best Practices</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Best Practices</h1>
+		<p>Avoid global variables,  avoid new,  avoid  ==,  avoid eval()</p>
+		<h1>Avoid Global Variables</h1>
+		<p>Minimize the use of global variables.</p>
+		<p>This includes all data types, objects, and functions.</p>
+		<p>Global variables and functions can be overwritten by other scripts.</p>
+		<p>Use local variables instead, and learn how to use closures.</p>
+		<h1>Always Declare Local Variables</h1>
+		<p>All variables used in a function should be declared as local variables. </p>
+		<p>Local variables must be declared with the var keyword, otherwise they will become global variables.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Strict mode does not allow undeclared variables.</h2>
+		<h1>Declarations on Top</h1>
+		<p>It is a good coding practice to put all declarations at the top of each script or function.</p>
+		<p>This will:</p>
+		<ul>
+			<li>Give cleaner code</li>
+			<li>Provide a single place to look for local variables</li>
+			<li>Make it easier to avoid unwanted (implied) global variables</li>
+			<li>Reduce the possibility of unwanted re-declarations</li>
+		</ul>
+		<pre>
+		// Declare at the beginning
+		var firstName, lastName, price, discount, fullPrice;
+
+		// Use later
+		firstName = "John";
+		lastName = "Doe";
+
+		price = 19.90;
+		discount = 0.10;
+
+		fullPrice = price * 100 / discount;
+		</pre>
+		<p>This also goes for loop variables:</p>
+		<pre>
+		// Declare at the beginning
+		var i;
+
+		// Use later
+		for (i = 0; i < 5; i++) {
+		</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - By default, JavaScript moves all declarations to the top (JavaScript hoisting).</h2>
+		<h1>Initialize Variables</h1>
+		<p>It is a good coding practice to initialize variables when you declare them.</p>
+		<p>this will:</p>
+		<ul>
+			<li>Give cleaner code</li>
+			<li>Provide a single place to initialize variables</li>
+			<li>Avoid undefined values</li>
+		</ul>
+		<pre>
+		// Declare and initiate at the beginning
+		var firstName = "",
+		lastName = "",
+		price = 0,
+		discount = 0,
+		fullPrice = 0,
+		myArray = [],
+		myObject = {};
+		</pre>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - Initializing variables provides an idea of the intended use (and intended data type).</h2>
+		<h1>Never Declare Number, String, or Boolean Objects</h1>
+		<p>Always treat numbers, strings, or booleans as primitive values. Not as objects.</p>
+		<p>Declaring these types as objects, slows down execution speed, and produces nasty side effects:</p>
+		<button onclick="neverDeclareObjectsStringTogether()" class="btn btn-info btn-lg">Never Declare Objects & Strings Together</button>
+		<p id="neverDeclareObjectsStringTogether"></p>
+		<p>Or even worse:</p>
+		<button onclick="comparingObjects()" class="btn btn-info btn-lg">Comparing Objects</button>
+		<p id="comparingObjects"></p>
+		<h1>Don't Use new Object()</h1>
+		<ul>
+			<li>Use {} instead of new Object()</li>
+			<li>Use "" instead of new String()</li>
+			<li>Use 0 instead of new Number()</li>
+			<li>Use false instead of new Boolean()</li>
+			<li>Use [] instead of new Array()</li>
+			<li>Use /()/ instead of new RegExp() </li>
+			<li>Use function (){} instead of new Function()</li>
+		</ul>
+		<button onclick="dontUseNewObjects()" class="btn btn-info btn-lg">Don't Use New Objects</button>
+		<p id="dontUseNewObjects"></p>
+		<h1>Beware of Automatic Type Conversions</h1>
+		<p>Beware that numbers can accidentally be converted to strings or NaN (Not a Number).</p>
+		<p>JavaScript is loosely typed. A variable can contain different data types, and a variable can change its data type:</p>
+		<button onclick="stringsConvertToNumbers()" class="btn btn-info btn-lg">Strings Convert To Numbers</button>
+		<p id="stringsConvertToNumbers"></p>
+		<p>When doing mathematical operations, JavaScript can convert numbers to strings:</p>
+		<p>Remove the comment (at the beginning of the lines) to test each case:</p>
+		<button onclick="numbersConvertToString()" class="btn btn-info btn-lg">Numbers Convert To String</button>
+		<p id="numbersConvertToString"></p>
+		<p>Subtracting a string from a string, does not generate an error but returns NaN (Not a Number):</p>
+		<button onclick="subtractingAStringFromAString()" class="btn btn-info btn-lg">Subtracting A String From A String</button>
+		<p id="subtractingAStringFromAString"></p>
+		<h1>Use === Comparison</h1>
+		<p>The == comparison operator always converts (to matching types) before comparison.</p>
+		<p>The === operator forces comparison of values and type: </p>
+		<p>Remove the comment (at the beginning of each line) to test each case:</p>
+		<button onclick="comparisonOperator()" class="btn btn-info btn-lg">Comparison Operator</button>
+		<p id="comparisonOperator"></p>
+		<h1>Use Parameter Defaults</h1>
+		<p>If a function is called with a missing argument, the value of the missing argument is set to undefined.</p>
+		<p>Undefined values can break your code. It is a good habit to assign default values to arguments.</p>
+		<button onclick="useParameterDefaults()" class="btn btn-info btn-lg">Assign Default Values To Arguments</button>
+		<p id="useParameterDefaults"></p>
+		<h1>End Your Switches with Defaults</h1>
+		<p>Always end your switch statements with a default. Even if you think there is no need for it.</p>
+		<button onclick="endSwitchWithDefault()" class="btn btn-info btn-lg">End Switch Statements With Default</button>
+		<p id="endSwitchWithDefault"></p>
+		<h1>Avoid Using eval()</h1>
+		<p>The eval() function is used to run text as code. In almost all cases, it should not be necessary to use it.</p>
+		<p>Because it allows arbitrary code to be run, it also represents a security problem.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Date Formats</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Date Input</h1>
+		<p>There are generally 4 types of JavaScript date formats:</p>
+		<ul>
+			<li>ISO Dates</li>
+			<li>Long Dates</li>
+			<li>Short Dates</li>
+			<li>Full Format</li>
+		</ul>
+		<h1>JavaScript Date Output</h1>
+		<p>Independent of input format, JavaScript will (by default) output dates in full text string format:</p>
+		<h4>Wed Mar 25 2015 05:00:00 GMT+0500 (Pakistan Standard Time)</h4>
+		<h1>JavaScript ISO Dates</h1>
+		<p>ISO 8601 is the international standard for the representation of dates and times.</p>
+		<p>The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:</p>
+		<button onclick="isoDate()" class="btn btn-success btn-lg">ISO Date Format</button>
+		<p id="isoDate"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  The computed date will be relative to your time zone. <br />
+		Depending on your time zone, the result above will vary between March 24 and March 25. </h2>
+		<p>It can be written without specifying the day (YYYY-MM):</p>
+		<button onclick="isoDateWithoutDay()" class="btn btn-success btn-lg">ISO Date Format</button>
+		<p id="isoDateWithoutDay"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  Time zones will vary the result above between February 28 and March 01. </h2>
+		<p>It can be written without month and day (YYYY):</p>
+		<button onclick="isoDateWithoutDayAndMonth()" class="btn btn-success btn-lg">ISO Date Format</button>
+		<p id="isoDateWithoutDayAndMonth"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  Time zones will vary the result above between December 31 2014 and January 01 2015. </h2>
+		<p>It can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SS):</p>
+		<button onclick="isoDateWithDayAndMonth()" class="btn btn-success btn-lg">ISO Date Format</button>
+		<p id="isoDateWithDayAndMonth"></p>
+		<p>The T in the date string, between the date and time, indicates UTC time.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - UTC (Universal Time Coordinated)  is the same as GMT (Greenwich Mean Time).</h2>
+		<h1>JavaScript Short Dates.</h1>
+		<p>Short dates are most often written with an "MM/DD/YYYY" syntax like this:</p>
+		<button onclick="shortDates()" class="btn btn-success btn-lg">Short Dates</button>
+		<p id="shortDates"></p>
+		<p>JavaScript will also accept "YYYY/MM/DD":</p>
+		<button onclick="shortDates1()" class="btn btn-success btn-lg">Short Dates</button>
+		<p id="shortDates1"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  Month is written before day in all short date and ISO date formats.<h2>
+		<h1>Leading Zero WARNING !</h1>
+		<p>In most browsers, months or days with no leading zeroes will be interpreted as short dates:</p>
+		<button onclick="leadingZero()" class="btn btn-success btn-lg">Leading Zero</button>
+		<p id="leadingZero"></p>
+		<p id="leadingZero1"></p>
+		<h1>JavaScript Long Dates.</h1>
+		<p>Long dates are most often written with a "MMM DD YYYY" syntax like this: </p>
+		<button onclick="longDates()" class="btn btn-success btn-lg">Long Dates</button>
+		<p id="longDates"></p>
+		<p>Month and day can be in any order:</p>
+		<button onclick="longDatesOrder()" class="btn btn-success btn-lg">Long Dates Order</button>
+		<p id="longDatesOrder"></p>
+		<p>And, month can be written in full (January), or abbreviated (Jan):</p>
+		<button onclick="longDatesOrder1()" class="btn btn-success btn-lg">Long Dates Order</button>
+		<p id="longDatesOrder1"></p>
+		<button onclick="longDatesOrder2()" class="btn btn-success btn-lg">Long Dates Order</button>
+		<p id="longDatesOrder2"></p>
+		<p>Commas are ignored. Names are case insensitive:</p>
+		<button onclick="longDatesCommas()" class="btn btn-success btn-lg">Long Dates Order</button>
+		<p id="longDatesCommas"></p>
+		<h1>Full Date Format</h1>
+		<p>JavaScript will accept date strings in "full JavaScript format":</p>
+		<button onclick="fullDate()" class="btn btn-success btn-lg">Full Date</button>
+		<p id="fullDate"></p>
+		<p>JavaScript will ignore errors both in the day name and in the time parentheses:</p>
+		<button onclick="fullDate1()" class="btn btn-success btn-lg">Full Date</button>
+		<p id="fullDate1"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

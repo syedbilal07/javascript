@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Performance</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Performance</h1>
+		<p>How to speed up your JavaScript code.</p>
+		<h1>Reduce Activity in Loops</h1>
+		<p>Loops are often used in programming.</p>
+		<p>Each statement in a loop, including the for statement, is executed for each iteration of the loop.</p>
+		<p>Search for statements or assignments that can be placed outside the loop.</p>
+		<p>Bad Code</p>
+		<pre>for (i = 0; i < arr.length; i++) {</pre>
+		<p>Better Code</p>
+		<pre>l = arr.length;
+for (i = 0; i < l; i++) {
+		</pre>
+		<p>The bad code accesses the length property of an array each time the loop is iterated.</p>
+		<p>The better code accesses the length property outside the loop, and makes the loop run faster.</p>
+		<h1>Reduce DOM Access</h1>
+		<p>Accessing the HTML DOM is very slow, compared to other JavaScript statements.</p>
+		<p>If you expect to access a DOM element several times, access it once, and use it as a local variable:</p>
+		<button onclick="reduceDomAccess()" class="btn btn-success btn-lg">Reduce DOM Access</button>
+		<p id="reduceDomAccess"></p>
+		<h1>Reduce DOM Size</h1>
+		<p>Keep the number of elements in the HTML DOM small.</p>
+		<p>This will always improve page loading, and speed up rendering (page display), especially on smaller devices.</p>
+		<p>Every attempt to search the DOM (like getElementsByTagName) will benefit from a smaller DOM.</p>
+		<h1>Avoid Unnecessary Variables</h1>
+		<p>Don't create new variables if you don't plan to save values.</p>
+		<p>Often you can replace code like this:</p>
+		<pre>var fullName = firstName + " " + lastName;
+document.getElementById("demo").innerHTML = fullName; 
+		</pre>
+		<p>With this:</p>
+		<pre>
+document.getElementById("demo").innerHTML = firstName + " " + lastName
+		</pre>
+		<h1>Delay JavaScript Loading</h1>
+		<p>Putting your scripts at the bottom of the page body, lets the browser load the page first.</p>
+		<p>While a script is downloading, the browser will not start any other downloads. In addition all parsing and rendering
+		   activity might be blocked.
+		</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - The HTTP specification defines that browsers
+			should not download more than two components in parallel.
+		</h2>
+		<p>An alternative is to use defer="true" in the script tag. The defer attribute specifies that the script should be executed
+		   after the page has finished parsing, but it only works for external scripts.
+		</p>
+		<p>If possible, you can add your script to the page by code, after the page has loaded:</p>
+		<h1>Avoid Using with</h1>
+		<p>Avoid using the with keyword. It has a negative effect on speed. It also clutters up JavaScript scopes.</p>
+		<p>The with keyword is not allowed in strict mode.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

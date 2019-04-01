@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Strings</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Strings</h1>
+		<p>A JavaScript string simply stores a series of characters like "John Doe".</p>
+		<p>A string can be any text inside quotes. You can use single or double quotes:</p>
+		<p id="demo"></p>
+		<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+		<p id="demo1"></p>
+		<h1>String Length</h1>
+		<p>The length of a string is found in the built in property length:</p>
+		<p id="demo2"></p>
+		<h1>Special Characters</h1>
+		<p>Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+		<p> var y = "We are the so-called "Vikings" from the north."</p>
+		<p>The string will be chopped to "We are the so-called ".</p>
+		<p>The solution to avoid this problem, is to use the \ escape character.</p>
+		<p>The backslash escape character turns special characters into string characters:</p>
+		<p id="demo3"></p>
+		<h1>Breaking Long Code Lines</h1>
+		<p> You can break a code line within a text string with a backslash.</p>
+		<p id="demo4"></p>
+		<p>The safest (but a little slower) way to break a long string is to use string addition:</p>
+		<p id="demo5"></p>
+		<h1>Strings Can be Objects</h1>
+		<p>Normally, JavaScript strings are primitive values, created from literals: var firstName = "John"</p>
+		<p>But strings can also be defined as objects with the keyword new: var firstName = new String("John")</p>
+		<p>Don't create strings as objects. It slows down execution speed.</p>
+		<p>The new keyword complicates the code. This can produce some unexpected results:</p>
+		<p id="demo6"></p>
+		<p> When using the == equality operator, equal strings looks equal:</p>
+		<p>Never create strings as objects.</p>
+		<p>Strings and objects cannot be safely compared.</p>
+		<p id="demo7"></p>
+		<p>When using the === equality operator, equal strings are not equal, because the === operator expects equality in both type and value.</p>
+		<p id="demo8"></p>
+		<p>Or even worse. Objects cannot be compared:</p>
+		<p id="demo9"></p>
+		<p id="demo10"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM Event Listener</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	div 
+	{
+		background-color: coral;
+		border: 1px solid;
+		padding: 50px;
+	}
+	#myDIV 
+	{
+		background-color: coral;
+		border: 1px solid;
+		padding: 50px;
+		color: white;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>The addEventListener() method</h1>
+		<p>Add an event listener that fires when a user clicks a button:</p>
+		<button type="button" id="eventListener" class="btn btn-success btn-lg">Add Event Listener</button>
+		<p id="addEventListener"></p>
+		<p>The addEventListener() method attaches an event handler to the specified element.</p>
+		<p>The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.</p>
+		<p>You can add many event handlers to one element.</p>
+		<p>You can add many event handlers of the same type to one element, i.e two "click" events.</p>
+		<p>You can add event listeners to any DOM object not only HTML elements. i.e the window object.</p>
+		<p>The addEventListener() method makes it easier to control how the event reacts to bubbling.</p>
+		<p>When using the addEventListener() method, the JavaScript is separated from the HTML markup, for better readability and
+		allows you to add event listeners even when you do not control the HTML markup.</p>
+		<p>You can easily remove an event listener by using the removeEventListener() method.</p>
+		<h1>Syntax</h1>
+		<pre>element.addEventListener(event, function, useCapture);</pre>
+		<p>The first parameter is the type of the event (like "click" or "mousedown"). </p>
+		<p>The second parameter is the function we want to call when the event occurs. </p>
+		<p>The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.</p>
+		<p style="background-color:lightyellow">Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".</p>
+		<h1>Add an Event Handler to an Element</h1>
+		<button type="button" class="btn btn-success btn-lg" id="eventHandler1">Add Event Handler</button>
+		<p>You can also refer to an external "named" function:</p>
+		<button type="button" class="btn btn-success btn-lg" id="eventHandler2">Add Event Handler</button>
+		<h1>Add Many Event Handlers to the Same Element</h1>
+		<p>The addEventListener() method allows you to add many events to the same element, without overwriting existing events:</p>
+		<button type="button" class="btn btn-success btn-lg" id="addManyEventHandlers">Add Many Event Handlers</button>
+		<p>You can add events of different types to the same element:</p>
+		<button type="button" class="btn btn-success btn-lg" id="addEventHandlersOfDifferentTypes">Add Event Handlers Of Different Types</button>
+		<p id="differentEventHandlers"></p>
+		<h1>Add an Event Handler to the Window Object</h1>
+		<p>The addEventListener() method allows you to add event listeners on any HTML DOM object such as HTML elements,
+		the HTML document, the window object, or other objects that support events, like the xmlHttpRequest object.</p>
+		<p id="addEventHandlerToWindowObject"></p>
+		<h1>Passing Parameters</h1>
+		<p>When passing parameter values, use an "anonymous function" that calls the specified function with the parameters:</p>
+		<button type="button" class="btn btn-success btn-lg" id="passingParameters">Passing Parameters</button>
+		<p id="passingParameters"></p>
+		<h1>Event Bubbling or Event Capturing?</h1>
+		<p>There are two ways of event propagation in the HTML DOM, bubbling and capturing.</p>
+		<p>Event propagation is a way of defining the element order when an event occurs. If you have a p element inside a div element,
+		and the user clicks on the p element, which element's "click" event should be handled first?</p>
+		<p>In <i>bubbling</i> the inner most element's event is handled first and then the outer: the p element's click event is handled first, then the div element's click event.</p>
+		<p>In <i>capturing</i> the outer most element's event is handled first and then the inner: the div element's click event will be handled first, then the p element's click event.</p>
+		<p>With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:</p>
+		<pre>addEventListener(event, function, useCapture);</pre>
+		<p>The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.</p>
+		<div id="myDiv">
+			<p id="myP">Click this paragraph, I am Bubbling.</p>
+		</div><br />
+		<div id="myDiv2">
+			<p id="myP2">Click this paragraph, I am Capturing.</p>
+		</div>
+		<h1>The removeEventListener() method</h1>
+		<p>The removeEventListener() method removes event handlers that have been attached with the addEventListener() method:</p>
+		<div id="myDIV">This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.
+			<p>Click the button to remove the DIV's event handler.</p>
+			<button onclick="removeHandler()" class="btn btn-danger btn-lg">Remove Event Listener</button>
+		</div>
+		<p id="removeEventListener"></p>
+		<p style="background-color:lightyellow">The addEventListener() and removeEventListener() methods are not supported in IE 8 and earlier versions and Opera 6.0
+		and earlier versions. However, for these specific browser versions, you can use the attachEvent() method to attach an 
+		event handlers to the element, and the detachEvent() method to remove it:</p>
+		<pre>
+		 element.attachEvent(event, function);
+		element.detachEvent(event, function);
+		</pre>
+		<h1>Cross Browser Solution</h1>
+		<button type="button" class="btn btn-success btn-lg" id="crossBrowserSolution">Cross Browser Solution</button>
+		<p id="crossBrowserSolution"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

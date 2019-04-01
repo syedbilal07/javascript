@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Forms Validation</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Form Validation</h1>
+		<p>HTML form validation can be done by a JavaScript.</p>
+		<p>If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted:</p>
+		<pre>
+		function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+		</pre>
+		<p>The function can be called when the form is submitted:</p>
+		<form name="myForm" onsubmit="return validateForm()">
+			<input type="text" class="form-control" placeholder="Enter Your Name" name="firstname"></input>
+			<input type="submit" value="Submit Form" class="btn btn-success btn-lg" id="validateForm()"></input>
+		</form>
+		<h1>JavaScript Can Validate Numeric Input</h1>
+		<p>JavaScript is often used to validate numeric input:</p>
+		<p>Please input a number between 1 and 10</p>
+		<input type="text" class="form-control" id="formNumericValidate">
+		<button type="button" class="btn btn-success btn-lg" onclick="formNumericValidation()">Form Numeric Validation</button>
+		<p id="formNumericValidation"></p>
+		<h1>Automatic HTML Form Validation</h1>
+		<p>HTML form validation can be performed automatically by the browser:</p>
+		<p>If a form field (fname) is empty, the required attribute prevents this form from being submitted: </p>
+		<form name="requiredForm">
+			<input type="text" class="form-control" name="firstname" required></input>
+			<input type="submit" value="Submit Form" class="btn btn-success btn-lg"></input>
+		</form>
+		<p style="background-color:lightyellow">Automatic HTML form validation does not work in Internet Explorer 9 or earlier.</p>
+		<h1>Data Validation</h1>
+		<p>Data validation is the process of ensuring that computer input is clean, correct, and useful.</p>
+		<p>Typical validation tasks are:</p>
+		<ul>
+			<li>has the user filled in all required fields?</li>
+			<li>has the user entered a valid date?</li>
+			<li>has the user entered text in a numeric field?</li>
+		</ul>
+		<p>Most often, the purpose of data validation is to ensure correct input to a computer application.</p>
+		<p>Validation can be defined by many different methods, and deployed in many different ways.</p>
+		<p><b>Server side validation</b> is performed by a web server, after input has been sent to the server.</p>
+		<p><b>Client side validation</b> is performed by a web browser, before input is sent to a web server.</p>
+		<h1>HTML Constraint Validation</h1>
+		<p>HTML5 introduced a new HTML validation concept called constraint validation.</p>
+		<p>HTML constraint validation is based on:</p>
+		<ul>
+			<li>Constraint validation <b>HTML Input Attributes</b></li>
+			<li>Constraint validation <b>CSS Pseudo Selectors</b></li>
+			<li>Constraint validation <b>DOM Properties and Methods</b></li>
+		</ul>
+		<h1>Constraint Validation HTML Input Attributes</h1>
+		<dl>
+			<dt>disabled</dt>
+			<dd>Specifies that the input element should be disabled</dd>
+			<dt>max</dt>
+			<dd>Specifies the maximum value of an input element</dd>
+			<dt>min</dt>
+			<dd>Specifies the minimum value of an input element</dd>
+			<dt>pattern</dt>
+			<dd>Specifies the value pattern of an input element</dd>
+			<dt>required</dt>
+			<dd>Specifies that the input field requires an element</dd>
+			<dt>type</dt>
+			<dd>Specifies the type of an input element</dd>
+		</dl>
+		<h1>Constraint Validation CSS Pseudo Selectors</h1>
+		<dl>
+			<dt>:disabled</dt>
+			<dd>Selects input elements with the "disabled" attribute specified</dd>
+			<dt>:invalid</dt>
+			<dd>Selects input elements with invalid values</dd>
+			<dt>:optional</dt>
+			<dd>Selects input elements with no "required" attribute specified</dd>
+			<dt>:required</dt>
+			<dd>Selects input elements with the "required" attribute specified</dd>
+			<dt>:valid</dt>
+			<dd>Selects input elements with valid values</dd>
+		</dl>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

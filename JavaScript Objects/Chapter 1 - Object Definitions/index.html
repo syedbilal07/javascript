@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Object Definitions</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p style="background-color:lightyellow">In JavaScript, objects are king. If you understand objects, you understand JavaScript.</p>
+		<p>In JavaScript, almost "everything" is an object.</p>
+		<ul>
+			<li>Booleans can be objects (or primitive data treated as objects)</li>
+			<li>Numbers can be objects (or primitive data treated as objects)</li>
+			<li>Strings can be objects (or primitive data treated as objects)</li>
+			<li>Dates are always objects</li>
+			<li>Maths are always objects</li>
+			<li>Regular expressions are always objects</li>
+			<li>Arrays are always objects</li>
+			<li>Functions are always objects</li>
+			<li>Objects are objects</li>
+		</ul>
+		<p>In JavaScript, all values, except primitive values, are objects.</p>
+		<p>Primitive values are: strings ("John Doe"), numbers (3.14), true, false, null, and undefined.</p>
+		<h1>Objects are Variables Containing Variables</h1>
+		<p>JavaScript variables can contain single values:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="javascriptVariables()">JavaScript Variables</button>
+		<p id="javascriptVariables"></p>
+		<p>Objects are variables too. But objects can contain many values.</p>
+		<p>The values are written as name : value pairs (name and value separated by a colon).</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="objectsAreVariables()">Objects Are Variables</button>
+		<p id="objectsAreVariables"></p>
+		<p style="background-color:lightyellow">A JavaScript object is a collection of named values</p>
+		<h1>Object Properties</h1>
+		<p>The named values, in JavaScript objects, are called properties.</p>
+		<dl>
+			<dt>firstName</dt>
+			<dd>Syed</dd>
+			<dt>lastName</dt>
+			<dd>Bilal</dd>
+			<dt>age</dt>
+			<dd>23</dd>
+			<dt>eyeColor</dt>
+			<dd>Black</dd>
+		</dl>
+		<p>Objects written as name value pairs are similar to:</p>
+		<ul>
+			<li>Associative arrays in PHP</li>
+			<li>Dictionaries in Python</li>
+			<li>Hash tables in C</li>
+			<li>Hash maps in Java</li>
+			<li>Hashes in Ruby and Perl</li>
+		</ul>
+		<h1>Object Methods</h1>
+		<p>Methods are actions that can be performed on objects.</p>
+		<p>Object properties can be both primitive values, other objects, and functions.</p>
+		<p>An object method is an object property containing a function definition.</p>
+		<dl>
+			<dt>firstName</dt>
+			<dd>Syed</dd>
+			<dt>lastName</dt>
+			<dd>Bilal</dd>
+			<dt>age</dt>
+			<dd>23</dd>
+			<dt>eyeColor</dt>
+			<dd>Black</dd>
+			<dt>fullName</dt>
+			<dd>function() {return this.firstName + " " + this.lastName;}</dd>
+		</dl>
+		<p style="background-color:lightyellow">JavaScript objects are containers for named values, called properties and methods.</p>
+		<h1>Creating a JavaScript Object</h1>
+		<p>With JavaScript, you can define and create your own objects.</p>
+		<p>There are different ways to create new objects:</p>
+		<ul>
+			<li>Define and create a single object, using an object literal.</li>
+			<li>Define and create a single object, with the keyword new.</li>
+			<li>Define an object constructor, and then create objects of the constructed type.</li>
+		</ul>
+		<p style="background-color:lightyellow">In ECMAScript 5, an object can also be created with the function Object.create().</p>
+		<h1>Using an Object Literal</h1>
+		<p>This is the easiest way to create a JavaScript Object.</p>
+		<p>Using an object literal, you both define and create an object in one statement.</p>
+		<p>An object literal is a list of name:value pairs (like age:50) inside curly braces {}.</p>
+		<p>The following example creates a new JavaScript object with four properties:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="objectLiteral()">Objects Literal</button>
+		<p id="objectLiteral"></p>
+		<p>Spaces and line breaks are not important. An object definition can span multiple lines:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="objectLiteralCanSpanMultipleLines()">Objects Literal Can Span Multiple Lines</button>
+		<p id="objectLiteralCanSpanMultipleLines"></p>
+		<h1>Using the JavaScript Keyword new</h1>
+		<p>The following example also creates a new JavaScript object with four properties:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="usingNew()">Using NEW Keyword</button>
+		<p id="usingNew"></p>
+		<p style="background-color:lightyellow">The two examples above do exactly the same. There is no need to use new Object().
+		   For simplicity, readability and execution speed, use the first one (the object literal method).</p>
+		<h1>Using an Object Constructor</h1>
+		<p>The examples above are limited in many situations. They only create a single object.</p>
+		<p>Sometimes we like to have an "object type" that can be used to create many objects of one type.</p>
+		<p>The standard way to create an "object type" is to use an object constructor function:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="objectConstructor()">Object Constructor</button>
+		<p id="objectConstructor"></p>
+		<p>The above function (person) is an object constructor.</p>
+		<p>Once you have an object constructor, you can create new objects of the same type:</p>
+		<pre>
+		var myFather = new person("John", "Doe", 50, "blue");
+		var myMother = new person("Sally", "Rally", 48, "green"); 
+		</pre>
+		<h1>The this Keyword</h1>
+		<p>In JavaScript, the thing called <b>this</b>, is the object that "owns" the JavaScript code.</p>
+		<p>The value of <b>this</b>, when used in a function, is the object that "owns" the function.</p>
+		<p>The value of <b>this</b>, when used in an object, is the object itself.</p>
+		<p>The <b>this</b> keyword in an object constructor does not have a value. It is only a substitute for the new object.</p>
+		<p>The value of <b>this</b> will become the new object when the constructor is used to create an object.</p>
+		<p style="background-color:lightyellow">Note that <b>this</b> is not a variable. It is a keyword. You cannot change the value of this.</p>
+		<h1>Built-in JavaScript Constructors</h1>
+		<p>JavaScript has built-in constructors for native objects:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="buildInConstructor()">Build-in Constructor</button>
+		<p id="buildInConstructor"></p>
+		<p>The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.</p>
+		<h1>Did You Know?</h1>
+		<p>As you can see, JavaScript has object versions of the primitive data types String, Number, and Boolean.</p>
+		<p>There is no reason to create complex objects. Primitive values execute much faster.</p>
+		<p>And there is no reason to use new Array(). Use array literals instead: []</p>
+		<p>And there is no reason to use new RegExp(). Use pattern literals instead: /()/</p>
+		<p>And there is no reason to use new Function(). Use function expressions instead: function () {}.</p>
+		<p>And there is no reason to use new Object(). Use object literals instead: {}</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="datatypes()">Data Types</button>
+		<p id="datatypes"></p>
+		<h1>JavaScript Objects are Mutable</h1>
+		<p>Objects are mutable: They are addressed by reference, not by value.</p>
+		<p>If person is an object, the following statement will not create a copy of person:</p>
+		<pre>
+		var x = person;  // This will not create a copy of person.
+		</pre>
+		<p>The object x is not a copy of person. It is person. Both x and person is the same object.</p>
+		<p>Any changes to x will also change person, because x and person are the same object. </p>
+		<button type="button" class="btn btn-success btn-lg" onclick="objectsAreMutable()">Objects Are Mutable</button>
+		<p id="objectsAreMutable"></p>
+		<p style="background-color:lightyellow">Note: JavaScript variables are not mutable. Only JavaScript objects.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

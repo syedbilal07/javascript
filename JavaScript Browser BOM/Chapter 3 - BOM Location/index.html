@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>BOM Location</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.</p>
+		<h1>Window Location</h1>
+		<p>The <b>window.location</b> object can be written without the window prefix.</p>
+		<p>Some examples:</p>
+		<ul>
+			<li>window.location.href returns the href (URL) of the current page</li>
+			<li>window.location.hostname returns the domain name of the web host</li>
+			<li>window.location.pathname returns the path and filename of the current page</li>
+			<li>window.location.protocol returns the web protocol used (http:// or https://)</li>
+			<li>window.location.assign loads a new document</li>
+		</ul>
+		<h1>Window Location Href</h1>
+		<p>The <b>window.location.href</b> property returns the URL of the current page.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowLocationHref()">Window Location Href</button>
+		<p id="windowLocationHref"></p>
+		<h1>Window Location Hostname</h1>
+		<p>The <b>window.location.hostname</b> property returns the name of the internet host (of the current page).</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowLocationHostname()">Window Location Hostname</button>
+		<p id="windowLocationHostname"></p>
+		<h1>Window Location Pathname</h1>
+		<p>The <b>window.location.pathname</b> property returns the pathname of the current page.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowLocationPathname()">Window Location Pathname</button>
+		<p id="windowLocationPathname"></p>
+		<h1>Window Location Protocol</h1>
+		<p>The <b>window.location.protocol</b> property returns the web protocol of the page.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowLocationProtocol()">Window Location Protocol</button>
+		<p id="windowLocationProtocol"></p>
+		<h1>Window Location Assign</h1>
+		<p>The <b>window.location.assign()</b> method loads a new document.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="windowLocationAssign()">Window Location Assign</button>
+		<p id="windowLocationAssign"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

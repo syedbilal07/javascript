@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>BOM Navigator</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<p>The window.navigator object contains information about the visitor's browser.</p>
+		<h1>Window Navigator</h1>
+		<p>The <b>window.navigator</b> object can be written without the window prefix.</p>
+		<p>Some examples:</p>
+		<ul>
+			<li>navigator.appName</li>
+			<li>navigator.appCodeName</li>
+			<li>navigator.platform</li>
+		</ul>
+		<h1>Navigator Cookie Enabled</h1>
+		<p>The property cookieEnabled returns true if cookies are enabled, otherwise false:</p>
+		<p>Are cookies enabled in your browser?</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="navigatorCookieCheck()">Navigator Cookie Check</button>
+		<p id="navigatorCookieCheck"></p>
+		<h1>The Browser Names</h1>
+		<p>The properties <b>appName</b> and <b>appCodeName</b> return the name of the browser:</p>
+		<p>What is the name(s) of your browser?</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="browserNames()">Browser Names</button>
+		<p id="browserNames"></p>
+		<h1>Did you know?</h1>
+		<p>IE11, Chrome, Firefox, and Safari return appName "Netscape".</p>
+		<p>Chrome, Firefox, IE, Safari, and Opera all return appCodeName "Mozilla".</p>
+		<h1>The Browser Engine</h1>
+		<p>The property <b>product</b> returns the engine name of the browser:</p>
+		<p>Display browser engine.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="browserEngine()">Browser Engine</button>
+		<p id="browserEngine"></p>
+		<h1>The Browser Version I</h1>
+		<p>The property <b>appVersion</b> returns version information about the browser:</p>
+		<p>Display version information about the browser.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="browserVersion1()">Browser Version 1</button>
+		<p id="browserVersion1"></p>
+		<h1>The Browser Version II</h1>
+		<p>The property <b>userAgent</b> also returns version information about the browser:</p>
+		<p>Display the user-agent header sent by the browser to the server.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="browserVersion2()">Browser Version 1</button>
+		<p id="browserVersion2"></p>
+		<h1>Warning !!!</h1>
+		<p>The information from the navigator object can often be misleading, and should not be used to detect browser versions because:</p>
+		<ul>
+			<li>Different browsers can use the same name</li>
+			<li>The navigator data can be changed by the browser owner</li>
+			<li>Some browsers misidentify themselves to bypass site tests</li>
+			<li>Browsers cannot report new operating systems, released later than the browser</li>
+		</ul>
+		<h1>The Browser Platform</h1>
+		<p>The property <b>platform</b> returns the browser platform (operating system):</p>
+		<p>Display browser platform.</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="browserPlatform()">Browser Platform</button>
+		<p id="browserPlatform"></p>
+		<h1>The Browser Language</h1>
+		<p>The <b>property</b> language returns the browser's language:</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="browserLanguage()">Browser Language</button>
+		<p id="browserLanguage"></p>
+		<h1>Is Java Enabled?</h1>
+		<p>The method <b>javaEnabled()</b> returns true if Java is enabled:</p>
+		<button type="button" class="btn btn-info btn-lg" onclick="javaCheck()">Java Check</button>
+		<p id="javaCheck"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

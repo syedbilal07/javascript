@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Loop For</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript For Loop</h1>
+		<p>Loops can execute a block of code a number of times.</p>
+		<p>Loops are handy, if you want to run the same code over and over again, each time with a different value.</p>
+		<p>Often this is the case when working with arrays:</p>
+		<h2>Instead of writing:</h2>
+		<p>
+		text += cars[0] + "<br>";
+        text += cars[1] + "<br>";
+        text += cars[2] + "<br>";
+		text += cars[3] + "<br>";
+		text += cars[4] + "<br>";
+		text += cars[5] + "<br>"; 
+		</p>
+		<h2>You can write:</h2>
+		<button onclick="forLoop()" class="btn btn-info btn-lg">FOR Loop</button>
+		<p id="forLoop"></p>
+		<h1>Different Kinds of Loops</h1>
+		<p>JavaScript supports different kinds of loops:</p>
+		<ul>
+			<li>for - loops through a block of code a number of times</li>
+			<li>for/in - loops through the properties of an object</li>
+			<li>while - loops through a block of code while a specified condition is true</li>
+			<li>do/while - also loops through a block of code while a specified condition is true</li>
+		</ul>
+		<h1>The For Loop</h1>
+		<p>The for loop is often the tool you will use when you want to create a loop.</p>
+		<p>The for loop has the following syntax:</p>
+		<pre>for (statement 1; statement 2; statement 3) {
+    code block to be executed
+}
+		</pre>
+		<p>Statement 1 is executed before the loop (the code block) starts.</p>
+		<p>Statement 2 defines the condition for running the loop (the code block).</p>
+		<p>Statement 3 is executed each time after the loop (the code block) has been executed.</p>
+		<button onclick="forLoop1()" class="btn btn-info btn-lg">FOR Loop</button>
+		<p id="forLoop1"></p>
+		<p>From the example above, you can read:</p>
+		<p>Statement 1 sets a variable before the loop starts (var i = 0).</p>
+		<p>Statement 2 defines the condition for the loop to run (i must be less than 5).</p>
+		<p>Statement 3 increases a value (i++) each time the code block in the loop has been executed.</p>
+		<h1>Statement 1</h1>
+		<p>Normally you will use statement 1 to initiate the variable used in the loop (i = 0).</p>
+		<p>This is not always the case, JavaScript doesn't care. Statement 1 is optional.</p>
+		<p>You can initiate many values in statement 1 (separated by comma):</p>
+		<button onclick="forLoop2()" class="btn btn-info btn-lg">FOR Loop</button>
+		<p id="forLoop2"></p>
+		<p>And you can omit statement 1 (like when your values are set before the loop starts):</p>
+		<button onclick="forLoop3()" class="btn btn-info btn-lg">FOR Loop</button>
+		<p id="forLoop3"></p>
+		<h1>Statement 2</h1>
+		<p>Often statement 2 is used to evaluate the condition of the initial variable.</p>
+		<p>This is not always the case, JavaScript doesn't care. Statement 2 is also optional.</p>
+		<p>If statement 2 returns true, the loop will start over again, if it returns false, the loop will end.</p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  If you omit statement 2, you must provide a break inside the loop. 
+		    Otherwise the loop will never end. This will crash your browser. Read about breaks in a later chapter of this tutorial.</h2>
+		<h1>Statement 3</h1>
+		<p>Often statement 3 increases the initial variable.</p>
+		<p>This is not always the case, JavaScript doesn't care, and statement 3 is optional.</p>
+		<p>Statement 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else.</p>
+		<p>Statement 3 can also be omitted (like when you increment your values inside the loop): </p>
+		<button onclick="forLoop4()" class="btn btn-info btn-lg">FOR Loop</button>
+		<p id="forLoop4"></p>
+		<h1>The For/In Loop</h1>
+		<p>The JavaScript for/in statement loops through the properties of an object:</p>
+		<button onclick="forInLoop()" class="btn btn-info btn-lg">FOR/IN Loop</button>
+		<p id="forInLoop"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

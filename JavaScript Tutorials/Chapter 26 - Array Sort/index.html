@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Array Sort</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Sorting Arrays</h1>
+		<p>The sort() method is one of the strongest array methods.</p>
+		<h1>Sorting an Array</h1>
+		<p>The sort() method sorts an array alphabetically: </p>
+		<button onclick="sortMethod()" class="btn btn-info btn-lg">Array Sort Method</button>
+		<p id="sortMethod"></p>
+		<h1>Reversing an Array</h1>
+		<p>The reverse() method reverses the elements in an array.</p>
+		<p>You can use it to sort an array in descending order: </p>
+		<button onclick="reverseMethod()" class="btn btn-info btn-lg">Array Reverse Method</button>
+		<p id="reverseMethod"></p>
+		<h1>Numeric Sort</h1>
+		<p>By default, the sort() function sorts values as strings.</p>
+		<p>This works well for strings ("Apple" comes before "Banana").</p>
+		<p>However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".</p>
+		<p>Because of this, the sort() method will produce incorrect result when sorting numbers.</p>
+		<p>You can fix this by providing a compare function:</p>
+		<button onclick="numericSortMethod()" class="btn btn-info btn-lg">Numeric Sort Method</button>
+		<p id="numericSortMethod"></p>
+		<p>Use the same trick to sort an array descending:</p>
+		<button onclick="numericSortDescending()" class="btn btn-info btn-lg">Numeric Sort Descending</button>
+		<p id="numericSortDescending"></p>
+		<h1>The Compare Function</h1>
+		<p>The purpose of the compare function is to define an alternative sort order.</p>
+		<p>The compare function should return a negative, zero, or positive value, depending on the arguments:</p>
+		<p>function(a, b){return a-b}</p>
+		<p>When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.</p>
+		<h3>Example:</h3>
+		<p>When comparing 40 and 100, the sort() method calls the compare function(40,100).</p>
+		<p>The function calculates 40-100, and returns -60 (a negative value).</p>
+		<p>The sort function will sort 40 as a value lower than 100.</p>
+		<p>You can use this code snippet to experiment with numerically and alphabetically sorting:</p>
+		<div class="btn btn-group btn-inline">
+			<button onclick="sortAlphabetically()" class="btn btn-info btn-lg">Sorting Array Alphabetically</button>
+			<button onclick="sortNumeric()" class="btn btn-info btn-lg">Sorting Array Numeric</button>
+		</div>
+		<p id="sortingBoth"></p>
+		<h1>Sorting an Array in Random Order</h1>
+		<button onclick="sortingRandom()" class="btn btn-info btn-lg">Sorting Array In Random Order</button>
+		<p id="sortingRandom"></p>
+		<h1>Find the Highest (or Lowest) Value</h1>
+		<p>How to find the highest value in an array?</p>
+		<button onclick="highestValue()" class="btn btn-info btn-lg">Highest Value In An Array</button>
+		<p>The Highest Value Is : <span id="highestValue"></span></p>
+		<p>And the lowest:</p>
+		<button onclick="lowestValue()" class="btn btn-info btn-lg">Lowest Value In An Array</button>
+		<p>The Lowest Value Is : <span id="lowestValue"></span></p>
+		<h1>Sorting Object Arrays</h1>
+		<p>JavaScript arrays often contain objects:</p>
+		<pre>
+		var cars = [
+		{type:"Volvo", year:2016},
+		{type:"Saab", year:2001},
+		{type:"BMW", year:2010}];
+		</pre>
+		<p>Even if objects have properties of different data types, the sort() method can be used to sort the array. </p>
+		<p>The solution is to write a compare function to compare the property values:</p>
+		<button onclick="comparingObjectProperty()" class="btn btn-info btn-lg">Comparing Object Property</button>
+		<p id="comparingObjectProperty"></p>
+		<p>Comparing string properties is a little more complex:</p>
+		<button onclick="comparingStringProperty()" class="btn btn-info btn-lg">Comparing String Property</button>
+		<p id="comparingStringProperty"></p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

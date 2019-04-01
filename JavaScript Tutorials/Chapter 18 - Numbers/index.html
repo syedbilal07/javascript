@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Numbers</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>Precision</h1>
+		<p>Integers (numbers without a period or exponent notation) are considered accurate up to 15 digits.</p>
+		<button onclick="precisionFunction()" class="btn btn-lg btn-info">Precision Number!</button>
+		<p id="precision"></p>
+		<p>The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate:</p>
+		<button onclick="floatingpointFunction()" class="btn btn-lg btn-info">Floating Point Number!</button>
+		<p id="floatingpoint"></p>
+		<p>To solve the problem above, it helps to multiply and divide:</p>
+		<button onclick="floatingsolutionFunction()" class="btn btn-lg btn-info">Floating Point Number!</button>
+		<p id="floatingsolution"></p>
+		<h1>Hexadecimal</h1>
+		<p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.</p>
+		<button onclick="hexadecimalFunction()" class="btn btn-lg btn-info">Hexa Decimal Number!</button>
+		<p id="hexadecimal"></p>
+		<p><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : Never write a number with a leading zero (like 07).</p>
+		<p>Some JavaScript versions interpret numbers as octal if they are written with a leading zero.</p>
+		<p>By default, Javascript displays numbers as base 10 decimals.</p>
+		<p>But you can use the toString() method to output numbers as base 16 (hex), base 8 (octal), or base 2 (binary).</p>
+		<button onclick="toStringFunction()" class="btn btn-lg btn-info">Hexa Decimal Number!</button>
+		<p id="toString"></p>
+		<h1>Infinity</h1>
+		<p>Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.</p>
+		<button onclick="infinityFunction()" class="btn btn-lg btn-info">Infinity Number!</button>
+		<p id="infinity"></p>
+		<p>Division by 0 (zero) also generates Infinity:</p>
+		<button onclick="infinityzeroFunction()" class="btn btn-lg btn-info">Infinity Number!</button>
+		<p id="infinityzero"></p>
+		<p>Infinity is a number: typeOf Infinity returns number.</p>
+		<button onclick="typeOfInfinityFunction()" class="btn btn-lg btn-info">TypeOf Infinity</button><br>
+		<p id="typeOfInfinity"></p>
+		<h1>NaN - Not a Number</h1>
+		<p>NaN is a JavaScript reserved word indicating that a value is not a number.</p>
+		<p>Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):</p>
+		<button onclick="nan1Function()" class="btn btn-lg btn-info">NaN</button><br>
+		<p id="nan1"></p>
+		<p>However, if the string contains a numeric value , the result will be a number:</p>
+		<button onclick="nan2Function()" class="btn btn-lg btn-info">NaN</button><br>
+		<p id="nan2"></p>
+		<p>You can use the global JavaScript function isNaN() to find out if a value is a number.</p>
+		<button onclick="nan3Function()" class="btn btn-lg btn-info">NaN</button><br>
+		<p id="nan3"></p>
+		<p>Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN: </p>
+		<button onclick="nan4Function()" class="btn btn-lg btn-info">NaN</button><br>
+		<p id="nan4"></p>
+		<p>Or the result might be a concatenation: </p>
+		<button onclick="nan5Function()" class="btn btn-lg btn-info">NaN</button><br>
+		<p id="nan5"></p>
+		<p>NaN is a number, and typeof NaN returns number:</p>
+		<button onclick="nan6Function()" class="btn btn-lg btn-info">NaN</button><br>
+		<p id="nan6"></p>
+		<h1>Numbers Can be Objects</h1>
+		<p>Normally JavaScript numbers are primitive values created from literals: var x = 123</p>
+		<p>But numbers can also be defined as objects with the keyword new: var y = new Number(123)</p>
+		<button onclick="numbersobject1Function()" class="btn btn-lg btn-info">Numbers Object</button><br>
+		<p id="numbersobject1"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : -  Don't create Number objects. It slows down execution speed. <br />
+		The new keyword complicates the code. This can produce some unexpected results:
+		</h2>
+		<p> When using the == equality operator, equal numbers looks equal:</p>
+		<button onclick="numbersobject2Function()" class="btn btn-lg btn-info">Numbers Object</button><br>
+		<p id="numbersobject2"></p>
+		<p>When using the === equality operator, equal numbers are not equal, because the === operator expects equality in both type and value.</p>
+		<button onclick="numbersobject3Function()" class="btn btn-lg btn-info">Numbers Object</button><br>
+		<p id="numbersobject3"></p>
+		<p>Or even worse. Objects cannot be compared:</p>
+		<button onclick="numbersobject4Function()" class="btn btn-lg btn-info">Numbers Object</button><br>
+		<p id="numbersobject4"></p>
+		<h2><img src="lamp.jpg" alt="lamp" height="auto" width="auto" />NOTE : - JavaScript objects cannot be compared.</h2>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	

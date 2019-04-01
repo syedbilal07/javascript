@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Function Definitions</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../../Libraries/Bootstrap Library/css/bootstrap.min.css">
+	<script src="../../../Libraries/Bootstrap Library/js/jquery.min.js"></script>
+	<script src="../../../Libraries/Bootstrap Library/js/bootstrap.min.js"></script>
+	<style>
+	body
+	{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	</style>
+	</head>
+		<body>
+		<h1>JavaScript Function Definitions</h1>
+		<p>JavaScript functions are defined with the function keyword.</p>
+		<p>You can use a function declaration or a function expression.</p>
+		<h1>Function Declarations</h1>
+		<p>Earlier in this tutorial, you learned that functions are declared with the following syntax:</p>
+		<pre>
+		function functionName(parameters) {
+  code to be executed
+} 
+		</pre>
+		<p>Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="simpleFunction()">Simple Function</button>
+		<p id="simpleFunction"></p>
+		<p style="background-color:lightyellow">Semicolons are used to separate executable JavaScript statements.<br />
+        Since a function declaration is not an executable statement, it is not common to end it with a semicolon.</p>
+		<h1>Function Expressions</h1>
+		<p>A JavaScript function can also be defined using an expression.</p>
+		<p>A function expression can be stored in a variable:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionExpressionStoredInAVariable()">Function Expression Stored In A Variable</button>
+		<p id="functionExpressionStoredInAVariable"></p>
+		<p>After a function expression has been stored in a variable, the variable can be used as a function:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="variableCanBeUsedAsAFunction()">Variable Can Be Used As A Function</button>
+		<p id="variableCanBeUsedAsAFunction"></p>
+		<p>The function above is actually an anonymous function (a function without a name).</p>
+		<p>Functions stored in variables do not need function names. They are always invoked (called) using the variable name.</p>
+		<h1>The Function() Constructor</h1>
+		<p>As you have seen in the previous examples, JavaScript functions are defined with the function keyword.</p>
+		<p>Functions can also be defined with a built-in JavaScript function constructor called Function(). </p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionConstructor()">Function Constructor</button>
+		<p id="functionConstructor"></p>
+		<p>You actually don't have to use the function constructor. The example above is the same as writing:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="nofunctionConstructor()">No Function Constructor</button>
+		<p id="nofunctionConstructor"></p>
+		<p style="background-color:lightyellow">Most of the time, you can avoid using the new keyword in JavaScript.</p>
+		<h1>Function Hoisting</h1>
+		<p>Earlier in this tutorial, you learned about "hoisting".</p>
+		<p>Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.</p>
+		<p>Hoisting applies to variable declarations and to function declarations.</p>
+		<p>Because of this, JavaScript functions can be called before they are declared:</p>
+		<pre>
+		myFunction(5);
+
+function myFunction(y) {
+    return y * y;
+} 
+		</pre>
+		<p>Functions defined using an expression are not hoisted.</p>
+		<h1>Self-Invoking Functions</h1>
+		<p>Function expressions can be made "self-invoking".</p>
+		<p>A self-invoking expression is invoked (started) automatically, without being called.</p>
+		<p>Function expressions will execute automatically if the expression is followed by ().</p>
+		<p>You cannot self-invoke a function declaration.</p>
+		<p>You have to add parentheses around the function to indicate that it is a function expression:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="selfInvokingFunction()">Self Invoking Function</button>
+		<p id="selfInvokingFunction"></p>
+		<p>The function above is actually an anonymous self-invoking function (function without name).</p>
+		<h1>Functions Can Be Used as Values</h1>
+		<p>JavaScript functions can be used as values:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionCanBeUsedAsValues()">Function Can Be Used As Values</button>
+		<p id="functionCanBeUsedAsValues"></p>
+		<p>JavaScript functions can be used in expressions:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="functionCanBeUsedAsExpression()">Function Can Be Used As Expression</button>
+		<p id="functionCanBeUsedAsExpression"></p>
+		<h1>Functions are Objects</h1>
+		<p>The <b>typeof</b> operator in JavaScript returns "function" for functions.</p>
+		<p>But, JavaScript functions can best be described as objects.</p>
+		<p>JavaScript functions have both <b>properties</b> and <b>methods.</b></p>
+		<p>The arguments.length property returns the number of arguments received when the function was invoked:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="argumentsLength()">Arguments Length Property</button>
+		<p id="argumentsLength"></p>
+		<p>The toString() method returns the function as a string:</p>
+		<button type="button" class="btn btn-success btn-lg" onclick="toStringMethod()">To String Method</button>
+		<p id="toStringMethod"></p>
+		<p style="background-color:lightyellow">A function defined as the property of an object, is called a method to the object.<br />
+        A function designed to create new objects, is called an object constructor.</p>
+		<script src="script.js" type="text/javascript"></script>
+		</body>
+</html>
+	
